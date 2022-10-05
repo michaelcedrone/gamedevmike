@@ -17,21 +17,24 @@ Version 0.1.2
 
 <h2 align=center>t1a05-input output by michael</h2>
 
-<a href="https://www.w3schools.com/jsref/prop_html_innerhtml_asp">Good reference to input putput Javascript innerHTML value by michael</a>
+<a href="https://www.w3schools.com/jsref/prop_html_innerhtml_asp">Good reference to input output Javascript innerHTML value by michael</a>
 
 <h4> Example input output code</h4>
+   
 <pre>
 let myIn01 = document.getElementById('myNum01').value
 document.getElementById('myDiv01').innerHTML = myInt01 + ' squared = ' + myInt01+myInt01
 </pre>
 
+   
+   
 <h4> Example working code</h4>
 
 <input id="myNum01" type=number value="4" ><br>
 
 <input type=button value="myEvent squares" onClick="{
                                                     let myIn01 = parseFloat(document.getElementById('myNum01').value)
-                                                    let myAnswer = myInt01 * myIn01
+                                                    let myAnswer = myIn01 * myIn01
                                                     document.getElementById('myDiv01').innerHTML =
                                                     myIn01 + 'squared = ' + myAnswer
                                                     }"><br>
