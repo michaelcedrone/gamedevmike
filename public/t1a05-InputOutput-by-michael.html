@@ -33,7 +33,10 @@ document.getElementById('myDiv01').innerHTML = myInt01 + ' squared = ' + myInt01
 <input id="myNum01" type=number value="4" ><br>
 
 <input type=button value="myEvent squares" onClick="{
-                                                   
+                                                    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+                                                    let myAnswer = myIn01 * myIn01
+                                                    document.getElementById('myDiv01').innerHTML =
+                                                    myIn01 + 'squared = ' + myAnswer
                                                     }"><br>
 <div id="myDiv01">...</div>
     
