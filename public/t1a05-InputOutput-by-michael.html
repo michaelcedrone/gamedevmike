@@ -98,6 +98,18 @@ document.getElementById('myDiv01').innerHTML = myInt01 + ' squared = ' + myInt01
                                                     }"><br>
 <div id="myDiv01">...</div>
     
+          
+          
+          
+          
+<input id="myNum02" type=number value="3" ><br>
+
+<input type=button value="myAdder" onClick="{
+                                                    let myIn02 = parseFloat(document.getElementById('myNum02').value)
+                                                    let myAnswer = myIn02 += myIn02
+                                                    
+                                                    }"><br>
+<div id="myDiv01">...</div>
 
 
 
@@ -133,7 +145,7 @@ document.getElementById('myDiv01').innerHTML = myInt01 + ' squared = ' + myInt01
            <button data-number>.</button>
            <button data-number>0</button>
            <button data-equals class="span-two">=</button>
- </div>
+</div>   
 </body>
 </html>
 
