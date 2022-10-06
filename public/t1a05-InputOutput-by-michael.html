@@ -1,4 +1,7 @@
- <style>
+<!DOCTYPE html> 
+
+
+<style>
         
       body {
     background-image: url("");
@@ -8,6 +11,67 @@
     display: inline-block;
     background-color:rgb(253, 250, 165);
     border: 2px solid blue;
+}
+ 
+ 
+ 
+ *, *::before, *::after {
+   box-sizing:border-box;
+    font-family:fantasy, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, lightblue, indigo, lightgreen);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);   
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap:break-word;
+    word-break: break-all;
+}
+
+.output . previous-operand {
+    color: rgba (255, 255, 255, .75);
+    font-size 1.5rem;
+}
+
+.output .current-operand {
+    color:white;
+    font-size: 2.5rem;
 }
     </style>
 
@@ -35,10 +99,110 @@ document.getElementById('myDiv01').innerHTML = myInt01 + ' squared = ' + myInt01
 <input type=button value="myEvent squares" onClick="{
                                                     let myIn01 = parseFloat(document.getElementById('myNum01').value)
                                                     let myAnswer = myIn01 * myIn01
-                                                    document.getElementById('myDiv01').innerHTML =
-                                                    myIn01 + 'squared = ' + myAnswer
+                                                    document.getElementById('myDiv01').innerHTML = myIn01 + 'squared = ' + myAnswer
                                                     }"><br>
 <div id="myDiv01">...</div>
     
+    <script>
+     class Calculator {
+constructor(previousOperandTextElement, currentOperandTextElement) {
+    this.previousOperandTextElement = previousOperandTextElement
+    this.currentOperandTextElement = currentOperandTextElement
+    this.clear()
+}
     
+    clear(){
+        this.currentOperand = ''
+        this.previousOperand = ''
+        this.operation = undefined
+    } 
+    
+    delete(){
+        
+    }
+    
+    appendNumber(number){
+        if (number === '.' &&)
+    }
+    
+    chooseOperation(operation) {
+        
+    }
+    
+    compute() {
+        
+    }
+    
+    updateDisplay(){
+        this.currantOperandTextElement.innerText = this.currentOperand
+    }
+}
+
+const numberButtons = document.querySelectorAll('[data-number]')
+const operationButtons = document.querySelectorAll('[data-operation]')
+const equalsButton = document. querySelector ('[data-equals]')
+const deleteButton = document. querySelector ('[data-delete]')
+const allClearButton = document. querySelector ('[data-all-clear]')
+const previousOperandTextElement = document. querySelector ('[data-previous-operand]')
+const currentOperandTextElement = document. querySelector ('[data-current-operand]')
+
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+})
+
+operationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+})
+     
+   </script>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+       <script src="script.js"></script>
+      <div class="calculator-grid">
+       <div class="output">
+           <div data-previous class="previous-operand"></div>
+          <div data-current class="currant-operand"></div>
+          </div>
+           <button data-all-clear class="span-two">AC</button>
+           <button data-delete>DEL</button>
+           <button data-operation>÷</button>
+           <button data-number>1</button>
+           <button data-number>2</button>
+           <button data-number>3</button>
+           <button data-operation>*</button>
+           <button data-number>4</button>
+           <button data-number>5</button>
+           <button data-number>6</button>
+           <button data-operation>+</button>
+           <button data-number>7</button>
+           <button data-number>8</button>
+           <button data-number>9</button>
+           <button data-operation>-</button>
+           <button data-number>.</button>
+           <button data-number>0</button>
+           <button data-equals class="span-two">=</button>
+ </div>
 </body>
+</html>
+
+
+
