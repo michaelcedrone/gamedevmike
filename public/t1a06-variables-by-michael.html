@@ -30,6 +30,11 @@ document.getElementByeId('myDiv01').innerHTML = myIn01
 </pre>
 
 <h4> Example working code</h4>
+   <script>
+   
+   myVar = <a href="https://www.w3schools.com/js/js_variables.asp">https://www.w3schools.com/js/js_variables.asp </a><br>
+   
+   </script>
 
 <input id="myText01" type=text value="The dog" ><br>
 
@@ -44,8 +49,15 @@ document.getElementByeId('myDiv01').innerHTML = myIn01
 <input type=button value="Using no variable" onClick="{
                                                       document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
                                                       }"><br>
+   
+   
+   
+   <input type=button value="Here's a Link" onClick="{
+                                                      document.getElementById('myDiv01').innerHTML = document.getElementById('myVar').value
+                                                      }"><br>
 
 
 <div id="myDiv01">...</div>
 
 </body>
+
