@@ -20,6 +20,11 @@ document.getElementByeId('myDiv01').innerHTML = myIn01
 
 <input id="myText01" type=text value="The dog" ><br>
 
+
+<input id="myLink01" type=link value="https://www.w3schools.com/js/js_variables.asp"><br>
+
+
+
 <input type=button value="Show Variable" onClick="{
                                                   let myIn01 = document.getElementById('myText01').value
                                                   document.getElementById('myDiv01').innerHTML = myIn01
@@ -31,7 +36,7 @@ document.getElementByeId('myDiv01').innerHTML = myIn01
                                                       }"><br>
 
 <input type=button value="Great source of variables" onClick="{
-                                                      document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+                                                      document.getElementById('myDiv01').innerHTML = document.getElementById('myLink01').value
                                                       }"><br>
 
 <div id="myDiv01">...</div>
