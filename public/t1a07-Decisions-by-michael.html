@@ -228,7 +228,7 @@ let myGreeting = 'Good day';
                       <input id="myName01" type=text value="whats my name?" > <br>
                       
       <input type=button value="Enter" onClick="{
-                           let myMike = (document.getElementById('myName01').value)
+                           let myMike = document.getElementById('myName01').value
                              if (myMike = 'michael' || 'Michael' ){
                                    document.getElementById('myDiv02').innerhtml = myMike + ' is my name!'
                                        } else { 
