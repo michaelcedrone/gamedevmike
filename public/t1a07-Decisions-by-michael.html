@@ -208,9 +208,9 @@ let myGreeting = 'Good day';
                                                  let myIn01 = parseFloat(document.getElementById('myNum01').value)
                                                  if (myIn01 >= 3){
                                                  document.getElementById('myDiv01').innerHTML = myin01 + ' is greater than 3'
-                                                 } else {
-                                                 document.getElementById('myDiv01').innerHTML = myIn01 + ' is less that 3'}
-                                             }">
+                                               } else {
+                                               document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
+                                       }">
                                              
                                                                                                                     
 <input type=button value="Complex if" onClick="{
@@ -221,13 +221,31 @@ let myGreeting = 'Good day';
                                                document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
                                        }">
                                        
+                      
+                      <input id="myName01" type=text value="what/'s my name?" ><br>
+                      
+      <input type=button value="Simple if Statements for Decision Making" onClick="{
+                           let myMike = float(document.getElementById('myName01').value)
+                             if (myMike = 'michael' || 'Michael' ){
+                                   document.getElementById('myDiv02').innerhtml = myMike + ' is my name!'
+                                       } else { 
+                                          document.getElementById('myDiv02').innerHTML = myMike + ' is not my name!'}
+                                         }">                             
+                                                                                   
+                             
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
                                 
-                                <div id="myDiv01">...</div>
+                               <div id="myDiv01">...</div> <br>
                                 
-                                
-                                
-                                
-                                
+                                 <div id="myDiv02">...</div> <br>
+
                                 
                                 <div class="wrapper">
         
