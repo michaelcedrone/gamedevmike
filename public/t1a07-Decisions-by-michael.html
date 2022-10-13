@@ -207,7 +207,7 @@ let myGreeting = 'Good day';
 <input type=button value="if...else" onClick="{
                                                  let myIn01 = parseFloat(document.getElementById('myNum01').value)
                                                  if (myIn01 >= 3){
-                                                 document.getElementById('myDiv01').innerHTML = myin01 + ' is greater than 3'
+                                                 document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
                                                } else {
                                                document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
                                        }">
@@ -229,11 +229,11 @@ let myGreeting = 'Good day';
                       
       <input type=button value="Enter" onClick="{
                            let myMike = document.getElementById('myName01').value
-                             if (myMike = 'michael' || 'Michael' ){
-                                   document.getElementById('myDiv02').innerhtml = myMike + ' is my name!'
-                                       } else { 
-                                          document.getElementById('myDiv02').innerHTML = myMike + ' is not my name!'}
-                                         }">                             
+                           if (myMike == 'michael' || myMike == 'Michael' ){
+                            document.getElementById('myDiv02').innerHTML = myMike + ' is my name!'
+                           } else { 
+                            document.getElementById('myDiv02').innerHTML = myMike + ' is not my name!'}
+                           }">                             
                                                                                    
 
                                 
