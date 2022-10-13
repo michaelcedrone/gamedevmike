@@ -242,8 +242,8 @@ document.getElementById("msg").innerHTML="X: " + x  + " Y : " + y
 if(y < 400 ){y= y +step;
 document.getElementById('i1').style.top= y + "px"; // vertical movment
 }else{
-if(x > 800){x= x -step;
-document.getElementById('i1').style.left= x - "px";//horizontal move
+if(x < 800){x= x +step;
+document.getElementById('i1').style.left= x + "px";//horizontal move
 }
 }
 //////////////////////
