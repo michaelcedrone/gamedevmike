@@ -212,7 +212,45 @@ I do CSS inside the tag. It overpowers all other methods<br>
                                          
                                          document.getElementById('moveleft').style.left = '-50' +=
                                          document.getElementById('moveleft').style.left = '-100'
+                                        }"><br><br>
+
+
+
+
+function move_img(str) {
+var step=50; // change this to different step value
+switch(str){
+case "down":
+var x=document.getElementById('i1').offsetTop;
+x= x + step;
+document.getElementById('i1').style.top= x + "px";
+break;
+var y=document.getElementById('i1').offsetLeft;
+ y= y - step;
+document.getElementById('i1').style.left= y + "px";
+break;
+}
+
+<input type=button onClick=move_img('left') value='Left'>
+
+
+
+<textarea id="moveleft" style="position:relative; left:0; top:0; width:200; height:50; ">
+  Advanced see if you move this textarea
+</textarea><br>
+
+<input type=button value=Move onClick="{
+                                       case "left":
+            var y=document.getElementById('i1').offsetLeft;
+            y= y - step;
+            document.getElementById('i1').style.left= y + "px";
+            break;
                                         }"><br>
+
+
+
+
+
 
 
 
