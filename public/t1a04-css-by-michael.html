@@ -239,10 +239,10 @@ var step=1; // Change this step value
 var y=document.getElementById('i1').offsetTop;
 var x=document.getElementById('i1').offsetLeft;
 document.getElementById("msg").innerHTML="X: " + x  + " Y : " + y
-if(y > 400 ){y= y +step;
+if(y < 400 ){y= y +step;
 document.getElementById('i1').style.top= y + "px"; // vertical movment
 }else{
-if(x > 800){x= x +step;
+if(x < 800){x= x +step;
 document.getElementById('i1').style.left= x + "px";//horizontal move
 }
 }
@@ -256,7 +256,7 @@ my_time=setTimeout('timer()',10);
 //-->
 </script>
 </head>
-<body >
+<body>
  <textarea id="i1" style="position:relative; left:0; top:0; width:200; height:50; ">
   Advanced see if you move this textarea
 </textarea><br><br><br><br>
