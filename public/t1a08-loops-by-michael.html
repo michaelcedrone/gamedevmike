@@ -213,36 +213,35 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
                                                                   }">
 |
 
-
-<p id="demo"></p><br><br>
-
-
-const cars = ["BMW", "Volvo", "Saab", "Ford"];
-let i = 2;
-let len = cars.length;
-let text = "";
-
-for (; i < len; i++) {
-  text += cars[i] + "<br>";
-}
-
-document.getElementById("demo").innerHTML = text;
-
-
-
 <div id="myDiv01">...</div><br><br>
 
 
 
 
+Max loops: <input id="myNum02" type=number value="4" ><br>
+
+<input type=button value="Basic For loop with Decisions" onClick="{
+
+                                                                  document.getElementById('myDiv02').innerHTML = ''
+                                                                  let myTemp = ''
+                                                                  
+                                                                  let myMax = parseInt(document.getElementById('myNum02').value)
+                                                                  
+                                                               for (let myLoop = 0; myLoop < myMax; myLoop = myLoop * 2 ){
+                                                                 if (myLoop * 10 > myMax){
+                                                                  myTemp += ' cool '
+                                                                  }
+                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
+                                                                  }
+                                                                  document.getElementById('myDiv02').innerHTML = myTemp
+                                                                  }">
 
 
 
 
 
 
-
-
+<div id="myDiv02">...</div><br><br>
 
 
 
