@@ -207,12 +207,27 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
                                                                  if (myLoop * 2 > myMax){
                                                                   myTemp += ' cool '
                                                                   }
-                               myTemp += 'Loop number: ' + myLoop + '<br>'
+                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
                                                                   }
                                                                   document.getElementById('myDiv01').innerHTML = myTemp
                                                                   }">
 |
 
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let i = 2;
+let len = cars.length;
+let text = "";
+
+for (; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
 
 
 <div id="myDiv01">...</div><br><br>
