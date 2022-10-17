@@ -247,6 +247,28 @@ Max loops: <input id="myNum02" type=number value="50" ><br>
 
 
 
+<h4> Example working code</h4><br>
+
+Max loops: <input id="myNum03" type=number value="4" ><br>
+
+<input type=button value="Basic For loop with Decisions" onClick="{
+                         document.getElementById('myDiv03').innerHTML = ''
+                                                                  let myTemp = ''
+                                                                  
+                                                                  let myMax = (document.getElementById('myNum03').value)
+                                                                  
+                                                               for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+                                                                 if (myLoop * 2 > myMax){
+                                                                  myTemp += ' cool '
+                                                                  }
+                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
+                                                                  }
+                                                                  document.getElementById('myDiv03').innerHTML = myTemp
+                                                                  }">
+|
+
+
+
 <div class="wrapper">
         
         
