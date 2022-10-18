@@ -245,6 +245,24 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
                                                                   }">
 |
 
+
+<input type=button value="Loop that doubles each cycle" onClick="{
+
+                                                                  document.getElementById('myDiv01').innerHTML = ''
+                                                                  let myTemp = ''
+                                                                  
+                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
+                                                                  
+                                                               for (let myLoop = 2; myLoop < myMax; myLoop = myLoop * 2 ){
+                                                                 if (myLoop * 10 > myMax){
+                                                                  myTemp += ' cool '
+                                                                  }
+                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
+                                                                  }
+                                                                  document.getElementById('myDiv01').innerHTML = myTemp
+                                                                  }">
+
+
 <div id="myDiv01">...</div><br><br>
 
 
