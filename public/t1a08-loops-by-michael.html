@@ -229,6 +229,22 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
                                                                   }">
 |
 
+<input type=button value="odd numbers" onClick="{
+                         document.getElementById('myDiv01').innerHTML = ''
+                                                                  let myTemp = ''
+                                                                  
+                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
+                                                                  
+                                                               for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+                                                                 if (myLoop % 2 === 1){
+                                                                  myTemp += ' odd '
+                                                                  }
+                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
+                                                                  }
+                                                                  document.getElementById('myDiv01').innerHTML = myTemp
+                                                                  }">
+|
+
 <div id="myDiv01">...</div><br><br>
 
 
