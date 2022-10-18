@@ -195,7 +195,7 @@ for (var i = 0; i < 3; i++) {
 
 <h4> Example working code</h4><br>
 
-Max loops: <input id="myNum01" type=number value="4" ><br>
+Max loops: <input id="myNum01" type=number value="0" ><br>
 
 <input type=button value="Basic For loop with Decisions" onClick="{
                          document.getElementById('myDiv01').innerHTML = ''
@@ -220,8 +220,8 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
                                                                   let myMax = parseInt(document.getElementById('myNum01').value)
                                                                   
                                                                for (let myLoop = 0; myLoop < myMax; myLoop++ ){
-                                                                 if (myLoop 7 % 2 > myMax){
-                                                                  myTemp += ' cool '
+                                                                 if (myLoop 7 % 2 == 0){
+                                                                  myTemp += ' even '
                                                                   }
                                                                  myTemp += 'Loop number: ' + myLoop + '<br>'
                                                                   }
