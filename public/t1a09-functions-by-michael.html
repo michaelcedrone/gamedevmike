@@ -30,6 +30,15 @@
            
    }
         
+    function myWordFunction(){
+    let myIn01 = (document.getElementById('myText02').value)
+    let mySum = myIn01 + ' is an idiot '
+    let myReply = myIn01 + ' is an idiot '
+    return myReply
+           
+   }
+      
+        
 </script>
 
 <body>
@@ -61,6 +70,13 @@ return parseInt(document.getElementById('myText01').value)
         
   <input type=button value="Fixed Addition Function" onClick="{
                                                      document.getElementById('myDiv01').innerHTML = myWorkingFunction()
+                                                     }"><br><br>
+        
+        
+        
+        <input type=text id="myText02" value="Enter your name..."><br>
+<input type=button value="Word Function" onClick="{
+                                                     document.getElementById('myDiv01').innerHTML = myWordFunction()
                                                      }"><br>   
 
 <div id="myDiv01">..</div>
