@@ -22,6 +22,14 @@
     
   }
   
+   function myWorkingFunction(){
+    let myIn01 = parseInt(document.getElementById('myText01').value)
+    let mySum = myIn01 + myIn01
+    let myReply = myIn01 + ' + ' + myIn01 + ' = ' + mySum
+    return myReply
+           
+   }
+        
 </script>
 
 <body>
@@ -49,7 +57,11 @@ return parseInt(document.getElementById('myText01').value)
 
 <input type=button value="Function Example" onClick="{
                                                      document.getElementById('myDiv01').innerHTML = myExampleFunction()
-                                                     }">
+                                                     }"><br><br>
+        
+  <input type=button value="Fixed Addition Function" onClick="{
+                                                     document.getElementById('myDiv01').innerHTML = myWorkingFunction()
+                                                     }"><br><br>      
 
 <div id="myDiv01">..</div>
   
