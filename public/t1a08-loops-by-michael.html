@@ -193,6 +193,8 @@ for (var i = 0; i < 3; i++) {
                      
 </pre>
 
+
+
 <h4> Example working code</h4><br>
 
 Max loops: <input id="myNum01" type=number value="4" ><br>
@@ -213,60 +215,7 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
                                                                   }">
 |
 
-<input type=button value="even numbers" onClick="{
-                         document.getElementById('myDiv01').innerHTML = ''
-                                                                  let myTemp = ''
-                                                                  
-                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
-                                                                  
-                                                               for (let myLoop = 0; myLoop < myMax; myLoop++ ){
-                                                                 if (myLoop % 2 === 0){
-                                                                  myTemp += ' even '
-                                                                  }
-                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
-                                                                  }
-                                                                  document.getElementById('myDiv01').innerHTML = myTemp
-                                                                  }"><br>
-|
-
-<input type=button value="odd numbers" onClick="{
-                         document.getElementById('myDiv01').innerHTML = ''
-                                                                  let myTemp = ''
-                                                                  
-                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
-                                                                  
-                                                               for (let myLoop = 0; myLoop < myMax; myLoop++ ){
-                                                                 if (myLoop % 2 === 1){
-                                                                  myTemp += ' odd '
-                                                                  }
-                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
-                                                                  }
-                                                                  document.getElementById('myDiv01').innerHTML = myTemp
-                                                                  }">
-|
-
-
-<input type=button value="Loop that doubles each cycle" onClick="{
-
-                                                                  document.getElementById('myDiv01').innerHTML = ''
-                                                                  let myTemp = ''
-                                                                  
-                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
-                                                                  
-                                                               for (let myLoop = 2; myLoop < myMax; myLoop = myLoop * 2 ){
-                                                                 if (myLoop * 10 > myMax){
-                                                                  myTemp += ' cool '
-                                                                  }
-                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
-                                                                  }
-                                                                  document.getElementById('myDiv01').innerHTML = myTemp
-                                                                  }">
-
-
 <div id="myDiv01">...</div><br><br>
-
-
-
 
 
 
@@ -290,6 +239,63 @@ Max loops: <input id="myNum03" type=number value="4" ><br>
                                                                   document.getElementById('myDiv03').innerHTML = myTemp
                                                                   }">
 |
+
+
+
+
+
+<input type=button value="even numbers" onClick="{
+                         document.getElementById('myDiv01').innerHTML = ''
+                                                                  let myTemp = ''
+                                                                  
+                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
+                                                                  
+                                                               for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+                                                                 if (myLoop % 2 === 0){
+                                                                  myTemp += ' even '
+                                                                  }
+                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
+                                                                  }
+                                                                  document.getElementById('myDiv03').innerHTML = myTemp
+                                                                  }"><br>
+|
+
+<input type=button value="odd numbers" onClick="{
+                         document.getElementById('myDiv01').innerHTML = ''
+                                                                  let myTemp = ''
+                                                                  
+                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
+                                                                  
+                                                               for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+                                                                 if (myLoop % 2 === 1){
+                                                                  myTemp += ' odd '
+                                                                  }
+                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
+                                                                  }
+                                                                  document.getElementById('myDiv03').innerHTML = myTemp
+                                                                  }">
+|
+
+
+<input type=button value="Loop that doubles each cycle" onClick="{
+
+                                                                  document.getElementById('myDiv01').innerHTML = ''
+                                                                  let myTemp = ''
+                                                                  
+                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
+                                                                  
+                                                               for (let myLoop = 2; myLoop < myMax; myLoop = myLoop * 2 ){
+                                                                 if (myLoop * 10 > myMax){
+                                                                  myTemp += ' cool '
+                                                                  }
+                                                                 myTemp += 'Loop number: ' + myLoop + '<br>'
+                                                                  }
+                                                                  document.getElementById('myDiv03').innerHTML = myTemp
+                                                                  }">
+
+
+
+
 
 
 <div id="myDiv03">...</div><br><br>
