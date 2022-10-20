@@ -35,10 +35,27 @@
     let mySum = myIn01 + ' is a poopy head '
     let myReply = myIn01 + ' is a poopy head '
     return myReply
-           
-   }
+            
+    }
+          
       
-        
+            var el_up = document.getElementById("GFG_UP");
+            var el_down = document.getElementById("GFG_DOWN");
+              
+            el_up.innerHTML = "Click on the button to generate "
+                    + "a link using JavaScript.";
+              
+            function GFG_Fun() {
+                var a = document.createElement('a'); 
+                var link = document.createTextNode("This is link");
+                a.appendChild(link); 
+                a.title = "This is Link"; 
+                a.href = "https://www.geeksforgeeks.org"; 
+                document.body.appendChild(a); 
+            }
+    
+
+
 </script>
 
 <body>
@@ -82,5 +99,26 @@ return parseInt(document.getElementById('myText01').value)
                                                      }"><br>   
 
 <div id="myDiv02">..</div>
+        
+        
+        
+        
+             <body style = "text-align:center;">
+          
+        <h1 style = "color:green;" > 
+            GeeksForGeeks
+        </h1>
+          
+        <p id = "GFG_UP" style =
+            "font-size: 19px; font-weight: bold;">
+        </p>
+          
+        <button onclick = "GFG_Fun()">
+            click here
+        </button>
+          
+        <p id = "GFG_DOWN" style =
+            "color: green; font-size: 24px; font-weight: bold;">
+        </p>
   
 </body>
