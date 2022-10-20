@@ -65,28 +65,40 @@ document.getElementById("demo").innerHTML =
 
 	 </pre>
 	  
+	  
+	  
 	<h4>The result</h4>
    
    <p id="demo"></p>
 	  
-	  
-	  
-	  
+  
    <script>
-		var msg; 
-		msg = "Welcome!";
-		alert(msg);
+var msg; 
+msg = "Welcome!";
+alert(msg);
 	   
-	   
-
 var x = 5;
 var y = 6;
 var z = x + y;
 document.getElementById("demo").innerHTML =
 "The value of z is: " + z;
 
-
    </script>
+	  
+	  
+	  <input id="myText01" type=text value="Write anything" ><br>
+
+<input type=button value="Show Variable" onClick="{
+                                                  let 'please' = document.getElementById('myText01').value
+                                                  document.getElementById('myDiv02').innerHTML = myIn01
+                                                  
+                                                  }"><br>
+	  <div id="myDiv02">...</div>
+	  
+	  
+	  
+	  
+	  
 
 </body>
 
