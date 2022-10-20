@@ -85,6 +85,20 @@ document.getElementById("demo").innerHTML =
 		  
 		  <h4>Make a fun little short story (one word at a time!)  </h4>
 		  
+		  <input id="myText01" type=text value="Enter your name here" ><br>
+
+
+<input type=button value="Show Variable" onClick="{
+                                                  let myIn01 = document.getElementById('myText01').value
+                                                  document.getElementById('myDiv00').innerHTML = myIn01
+                                                  
+                                                  }"><br>
+		  
+		  <div id="myDiv00">...</div>
+		  
+		  
+		  
+		  
 	<input id="myText01" type=text value="Write anything" ><br>
 
 <input type=button value="Show Variable" onClick="{
