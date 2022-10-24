@@ -48,9 +48,28 @@ alert('hi')
                                              }"     > This is Bold</b>
 
 
-
 <br>
+        
+        
+        
+        
+<script>
+function prefrrdsubjects() {
+prefer = document.forms[0].browsers.value;
+alert("subjects which are most liked and preferred " + prefer);
+}
+</script>
 
+        
+        <form>
+Choose which subject you like and will prefer:
+<select id="subjects" onchange="liked&preferred()">
+<option value="Chemistry">Chemistry</option>
+<option value="Physics">Physics</option>
+<option value="Maths">Maths</option>
+</select>
+</form>
+        
 
 You do at least 8 other events:<br>
 onClick, onDbClick, onChange, onBlue, onFocus, onMouseMove, onTouch, onKeyDown. onKeypress, onDragStart, onTouchStart, onTouchEnd, onTouchMove
