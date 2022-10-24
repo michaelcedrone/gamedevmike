@@ -37,7 +37,31 @@
     return myReply
             
     }
+        
+        function myWordFunction02(){
+    let myIn01 = (document.getElementById('myText02').value)
+    let mySum = myIn01 + ' is the day in which you were born, i guess... '
+    let myReply = myIn01 + ' is the day in which you were born, i guess... '
+    return myReply
+            
+    }
           
+        
+        function myWordFunction03(){
+    let myIn01 = (document.getElementById('myText02').value)
+    let mySum = myIn01 + ' is a debatable choice indeed '
+    let myReply = myIn01 + ' is a debatable choice indeed '
+    return myReply
+            
+    }
+        
+         function myWordFunction04(){
+    let myIn01 = (document.getElementById('myText02').value)
+    let mySum = myIn01 + '! Well that makes one of us, pal... '
+    let myReply = myIn01 + '! Well that makes one of us, pal... '
+    return myReply
+            
+    }
       
             var el_up = document.getElementById("GFG_UP");
             var el_down = document.getElementById("GFG_DOWN");
@@ -89,6 +113,8 @@ return parseInt(document.getElementById('myText01').value)
         
         <div id="myDiv01">..</div><br>
         
+        <center>
+        
         <h4> My custom functions </h4>
         
         <input type=text id="myText02" value="Enter your name..."><br>
@@ -99,6 +125,41 @@ return parseInt(document.getElementById('myText01').value)
 <div id="myDiv02">..</div><br>
         
         
+        
+        
+        
+        <input type=text id="myText02" value="Enter your date of birth..."><br>
+<input type=button value="Word Function" onClick="{
+                                                     document.getElementById('myDiv03').innerHTML = myWordFunction01()
+                                                     }"><br>   
+
+<div id="myDiv03">..</div><br>
+        
+        
+        
+        
+        
+        
+        <input type=text id="myText02" value="Enter your favorite food..."><br>
+<input type=button value="Word Function" onClick="{
+                                                     document.getElementById('myDiv04').innerHTML = myWordFunction02()
+                                                     }"><br>   
+
+<div id="myDiv04">..</div><br>
+        
+        
+        
+        
+        
+        
+        <input type=text id="myText02" value="Enter your passion"><br>
+<input type=button value="Word Function" onClick="{
+                                                     document.getElementById('myDiv05').innerHTML = myWordFunction03()
+                                                     }"><br>   
+
+<div id="myDiv05">..</div><br>
+        
+        </center>
 
    <h4> Good reference to javascript functions </h4>  
         
