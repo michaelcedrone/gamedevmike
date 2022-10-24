@@ -58,6 +58,16 @@ function prefrrdsubjects() {
 prefer = document.forms[0].browsers.value;
 alert("subjects which are most liked and preferred " + prefer);
 }
+        
+   
+
+
+function myFunction(val) {
+  alert(" The new value is: " + val);
+}
+   
+        
+        
 </script>
 
         
@@ -69,6 +79,17 @@ Choose which subject you like and will prefer:
 <option value="Maths">Maths (heh, heh, nerd)</option>
 </select>
 </form>
+
+<br>
+<br>
+
+<p>Write something in the text box, then click outside the box to activate the onchange event.</p>
+
+Enter something: <input   onChange="myFunction(this.value)">
+        
+        
+  <br>      
+  <br>      
         
 
 You do at least 8 other events:<br>
