@@ -66,7 +66,13 @@ function myFunction(val) {
   alert(" The new value is: " + val);
 }
    
-        
+ 
+        function func2() {
+document.getElementById("demo").style.backgroundColor = "red";
+}
+function func1() {
+document.getElementById("demo").style.backgroundColor = "yellow";
+}
         
 </script>
 
@@ -121,5 +127,10 @@ Enter something: <input   onChange="myFunction(this.value)">
 <p id="demo"></p>
         
         <br>
+        <br>
+        
+        <p>Press the key to change the background color </p>
+<input type="text" id="demo" onkeydown="func1()"
+onkeyup="func2()">
         
 </body>
