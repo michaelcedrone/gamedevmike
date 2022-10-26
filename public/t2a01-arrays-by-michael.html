@@ -92,7 +92,29 @@ myArray[17] = 'hwlthjhhotjhtryuytuyxcjui'
  }">
 
 <div id="myDiv02">...</div>
+        
+ <br>
+ <br>
+        
+        
+<p id="demo"></p>
 
+<script>
+        
+        <input type=button value="Example of onClick" onClick="{
+const fruits = ["Here", "Is", "An", "Array", "As", "A" , "List!"];
+
+let text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+        }
+        
+        
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+} 
+</script>
 
 
 </body>
