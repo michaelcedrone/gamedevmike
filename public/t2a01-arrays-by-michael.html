@@ -8,6 +8,12 @@
     background-color:rgb(253, 250, 165);
     border: 2px solid blue;
     border-radius: 1000px;
+              
+              
+              img{
+    width: 350px;
+    height: 350px;
+}
 }
 
 </style>
@@ -98,13 +104,39 @@ myArray[17] = 'hwlthjhhotjhtryuytuyxcjui'
  }">
 
 <div id="myDiv02">...</div>
-        
- <br>
- <br>
-        
-        
-
 
 </body>
+      
+        <script>
+        var images = ["./images/splash class room image.jpg",
+"./images/splash animal image.jpg",
+"./images/splash nature image.jpg",
+"./images/splash food image.jpg",
+"./images/splash travel image.jpg"];
+var index = 0;
+
+function makeImage() {
+   var img = document.createElement('img')
+   img.src = images[index];
+   document.getElementById('content').appendChild(img);
+}
+
+function nextImage(){
+   var img = document.getElementById('content').getElementsByTagName('img')[0]
+   index++;
+   index = index % images.length; 
+   img.src = images[index];
+}
+        </script>
+        
+        
+<script src="./javascript/imageArray.js"></script>
+<body onload="makeImage();">
+    <div class="contents" id="content"></div>
+    <button onclick="nextImage()">Next Image</button>
+</body>   
+        
+        
+        
 
 </center>
