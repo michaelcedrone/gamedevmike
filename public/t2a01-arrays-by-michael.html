@@ -133,10 +133,7 @@ function nextImage(){
    index = index % images.length; 
    img.src = images[index];
 }
-               function Rng(){ 
-                 var randomNumber = Math.floor(Math.random() * 10) + 1;
-document.getElementById("random_number").innerHTML = randomNumber;    
-               }
+
                 
           function randomNumber(min, max) { 
     min = Math.ceil(min);
@@ -163,10 +160,8 @@ document.write( randomNumber(1, 10) );
      
        
   <input type=button value="Rng" onClick="{
-    let myGen = document.getElementById('myText02').value
-    let mySum = ''
-    document.getElementById('myDiv02').innerHTML = ' '
-        
+    document.getElementById('myDiv02').innerHTML = randomNumber()
+        }
 
         
 
