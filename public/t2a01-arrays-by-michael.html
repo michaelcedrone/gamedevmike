@@ -134,6 +134,9 @@ function nextImage(){
    img.src = images[index];
 }
                 
+                 var randomNumber = Math.floor(Math.random() * 10) + 1;
+document.getElementById("random_number").innerHTML = randomNumber;    
+                
         </script>
         
         
@@ -145,21 +148,10 @@ function nextImage(){
      <br>
      <br>
      
-        <script>
-                
-             function myWorkingFunction(){
-  const a = Math.floor(Math.random() * (10 - 1)) + 1;
-    return myReply   
-             }         
-      
-        </script>
+       
   
         
-        <input type=button value="Rng function" onClick="{
-                                                     document.getElementById('myDiv03').innerHTML = myWorkingFunction()
-                                                     }"><br>
-  
-        <div id='myDiv03'>...</div>
+<p id="random_number"></p>
         
 
         
