@@ -147,20 +147,7 @@ function nextImage(){
 }
                 }
                 
-                
-                
-                
-       function rollTheDice() {
-            setTimeout(function () {
-                var randomNumber1 = Math.floor(Math.random() * 6) + 1;
-                document.querySelector(".img1").setAttribute("src", "dice" + randomNumber1 + ".png");
-            }
-                       }
-                       
-                
-   
- 
-                
+        
         </script>
         
         
@@ -173,7 +160,14 @@ function nextImage(){
      <br>
      
         
-       
+       <script>
+         function rollTheDice() {
+            setTimeout(function () {
+                var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+                document.querySelector(".img1").setAttribute("src", "dice" + randomNumber1 + ".png");
+            }
+                       }      
+        </script>
         
           
        
