@@ -133,18 +133,6 @@ function nextImage(){
    index = index % images.length; 
    img.src = images[index];
 }
-
-                
-          function randomNumber(min, max) { 
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-} 
-  
-document.write("Random Number between 1 and 10: ") 
-  
-// Function call
-document.write( randomNumber(1, 10) ); 
                  
                 
         </script>
@@ -160,7 +148,7 @@ document.write( randomNumber(1, 10) );
      
        
   <input type=button value="Rng" onClick="{
-    document.getElementById('myDiv03').innerHTML = randomNumber()
+    document.getElementById('myDiv03').innerHTML = Math.floor(Math.random() * 9)
         }
 
         <div id="myDiv03">...</div>
