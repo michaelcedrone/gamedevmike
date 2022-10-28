@@ -134,13 +134,13 @@ myArray[17] = 'hwlthjhhotjhtryuytuyxcjui'
 var index = 0;
 
 function makeImage() {
-   var img = document.createElement('img')
+   var img = document.createElement('img');
    img.src = images[index];
    document.getElementById('content').appendChild(img);
 }
 
 function nextImage(){
-   var img = document.getElementById('content').getElementsByTagName('img')[0]
+   var img = document.getElementById('content').getElementsByTagName('img')[0];
    index++;
    index = index % images.length; 
    img.src = images[index];
@@ -160,25 +160,7 @@ function nextImage(){
      <br>
      
         
-       <script>
-         function rollTheDice() {
-            setTimeout(function () {
-                var randomNumber1 = Math.floor(Math.random() * 6) + 1;
-                document.querySelector(".img1").setAttribute("src", "dice" + randomNumber1 + ".png");
-            }
-                       }      
-        </script>
-        
-          
-       
-        
-       <div class="container bottom">
-        <button type="button" class="butn"
-            onClick="rollTheDice()">
-            Roll the Dice
-        </button>
-    </div>
-        
+      
         
         
         
