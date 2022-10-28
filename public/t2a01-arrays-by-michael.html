@@ -150,52 +150,33 @@ function nextImage(){
                 
                 
                 
-                 
-               var sides = ["https://yt3.ggpht.com/a/AATXAJyBZWbnA-R6l13NU7Ieczm5wBy462YyWualHg=s900-c-k-c0xffffffff-no-rj-mo",
-                      "https://pngimg.com/uploads/apple_logo/apple_logo_PNG19695.png",
-                      "https://yt3.ggpht.com/-1R8CxhfLrys/AAAAAAAAAAI/AAAAAAAAAAA/vrkkyYKSSYM/s900-c-k-no-mo-rj-c0xffffff/photo.jpg",
-                     "https://th.bing.com/th/id/R.c985c7295b85c27576dbbdf80aabeadf?rik=jhjugslks1jZaw&pid=ImgRaw&r=0",
-                     "https://memesboy.com/wp-content/uploads/2018/03/I-Am-Prepared-To-Die-Pear-Meme.jpg",
-                     "https://target.scene7.com/is/image/Target/GUEST_567e3c83-bba3-46f4-9cef-c039e3ed3462?wid=488&hei=488&fmt=pjpeg",
-                     "https://th.bing.com/th/id/OIP.L7oxEahR3Z5uKY6gIaNzVQHaFj?pid=ImgDet&rs=1",
-                     "https://th.bing.com/th/id/R.a0bd6d73a5cb70a5faf6b57a7784bc37?rik=P6a%2bGgc%2bULj4yg&riu=http%3a%2f%2fmemesboy.com%2fwp-content%2fuploads%2f2018%2f03%2fLol-Spam-Mango-Meme.jpg&ehk=%2fuhP9BTM%2fUt8EFOIOzGASFY0QXP9jtxwqftujQJ5I1w%3d&risl=&pid=ImgRaw&r=0",
-                     "https://th.bing.com/th/id/OIP.wxn5Fb-UlvG8GSQu2q0G_wHaJC?pid=ImgDet&rs=1",];
-var index = 0;
-
-function makeSide() {
-   var img = document.createElement('img')
-   img.src = sides[index];
-   document.getElementById('content').appendChild(img);
-}
-
-function nextSide(){
-   var img = document.getElementById('content').getElementsByTagName('img')[0]
-   index++;
-   index = index % sides.length; 
-   img.src = sides[index];
-         document.getElementById('myDiv04').innerHTML = Math.floor(Math.random() * 9)
-}
+   
+   var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+           document.querySelector(".img1").setAttribute("src", "dice" + randomNumber1 + ".png");       
                 
         </script>
         
         
 <script src="./javascript/imageArray.js"></script>
-<body onload="makeSide();">
+<body onload="makeImage();">
     <div class="contents" id="content"></div>
-    <button onclick="nextSide()">Roll</button>
+    <button onclick="nextImage()">Roll</button>
         
      <br>
      <br>
      
         
-        
+       
         
           
        
         
-        
-        
-        
+       <div class="container bottom">
+        <button type="button" class="butn"
+            onClick="rollTheDice()">
+            Roll the Dice
+        </button>
+    </div>
         
         
         
