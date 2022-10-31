@@ -221,10 +221,10 @@ function displayRandomPictures()
   var picture = document.getElementsByTagName('pic');
   var l = pictures.length;
   for (var p = 0; p < l; p++) {
-     picture[0].parentNode.removeChild(picture[0]);
+     pictures[0].parentNode.removeChild(pictures[0]);
   }
   // display the new random image  
-  document.body.appendChild(newPicture);
+  document.body.appendChild(newPictures);
 }
 
                 
