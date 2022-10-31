@@ -219,9 +219,9 @@ function displayRandomImages()
  
   // remove the previous images
   var image = document.getElementsByTagName('img');
-  var l = images.length;
+  var l = image.length;
   for (var p = 0; p < l; p++) {
-     images[0].parentNode.removeChild(images[0]);
+     image[0].parentNode.removeChild(image[0]);
   }
   // display the new random image  
   document.body.appendChild(newImages);
