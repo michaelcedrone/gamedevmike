@@ -218,13 +218,13 @@ function displayRandomImages()
   var newImage = getRandomNum(0, newArray.length - 1);
  
   // remove the previous images
-  var image = document.getElementsByTagName('img');
+  var images = document.getElementsByTagName('img');
   var l = images.length;
   for (var p = 0; p < l; p++) {
      images[0].parentNode.removeChild(images[0]);
   }
   // display the new random image  
-  document.body.appendChild(newImages);
+  document.body.appendChild(newImage);
 }
 
                 
