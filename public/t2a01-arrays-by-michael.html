@@ -228,20 +228,23 @@ function displayRandomImages()
   // display the new random image  
   document.body.appendChild(newImage);
 }
-                
-                
-        
+
         </script>
         
+        
+        
+        <input type=button value="Random Number" onClick="{
+    document.getElementById('myDiv03').innerHTML = Math.floor(Math.random() * 9)
+                }">
+
+        <div id="myDiv03">...</div>
 
      <br>
      <br>
      
         
       <div>
-        
         <button onclick="displayRandomImages();"> Display Images </button>
-        
         </div>
        
 </body>   
