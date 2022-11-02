@@ -68,11 +68,20 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
  
  
  
+ 
+ 
+ 
  <input type=text id="myText02" value="3"><br>
 
 <input type=button value="Example of onClick" onClick="{
     let myTemp = document.getElementById('myText02').value
     let mySum = ''
+    let myPerson = {
+                             "firstName": "John",
+                             "lastName": "Doe",
+                             "age": "50",
+                             "eyeColor": "blue",                                   
+                           }                                                   
     document.getElementById('myDiv02').innerHTML = ' '
                                                        
 myArray = new Array()
