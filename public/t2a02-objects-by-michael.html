@@ -48,10 +48,12 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
                              'eyeColor': 'blue',                                   
                            }
                                           
-                      if (myText01 == 'name' || myText01 == 'Name' ){
-                            document.getElementById('myDiv01').innerHTML += myText01 + myPerson.firstName
+                                          
+                        let myMike = document.getElementById('myText01').value                  
+                      if (myMike == 'name' || myMike == 'Name' ){
+                            document.getElementById('myDiv01').innerHTML += myMike + myPerson.firstName + '<br>'
                            } else { 
-                            document.getElementById('myDiv01').innerHTML += myText01 + myPerson.lastName
+                            document.getElementById('myDiv01').innerHTML += myMike + myPerson.lastName + '<br>'
                                     }
                                             
                                           
