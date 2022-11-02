@@ -64,6 +64,28 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
             document.getElementById('myDiv01').innerHTML = 'firstName: ' + myPerson.firstName + '<br>'
             document.getElementById('myDiv01').innerHTML = 'lastName: ' + myPerson.lastName + '<br>'                                   
             document.getElementById('myDiv01').innerHTML = 'age: ' + myPerson.age + '<br>'
-            document.getElementById('myDiv01').innerHTML = 'eyeColor: ' + myPerson.eyeColor + '<br>'    
+            document.getElementById('myDiv01').innerHTML = 'eyeColor: ' + myPerson.eyeColor + '<br>'   
+ 
+ 
+ 
+ <input type=text id="myText02" value="3"><br>
+
+<input type=button value="Example of onClick" onClick="{
+    let myTemp = document.getElementById('myText02').value
+    let mySum = ''
+    document.getElementById('myDiv02').innerHTML = ' '
+                                                       
+myArray = new Array()
+myArray[0] = myPerson.firstName
+myArray[1] = myPerson.lastName
+myArray[2] = myPerson.age                                  
+ for (let myLoop=0;   myLoop < myTemp;    myLoop++){
+       mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
+   }
+    document.getElementById('myDiv02').innerHTML = mySum
+ }">
+
+<div id="myDiv02">...</div>
+
                                                
         </body>                                       
