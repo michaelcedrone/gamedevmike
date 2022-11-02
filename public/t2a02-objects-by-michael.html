@@ -48,6 +48,15 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
                              'eyeColor': 'blue',                                   
                            }
                                           
+                      if (myText01 == 'name' || myText01 == 'Name' ){
+                            document.getElementById('myDiv01').innerHTML += myText01 + myPerson.firstName
+                           } else { 
+                            document.getElementById('myDiv01').innerHTML = myText01 + myPerson.lastName
+                                    }
+                                            
+                                          
+                                          
+                                          
                                           
             document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
             document.getElementById('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
