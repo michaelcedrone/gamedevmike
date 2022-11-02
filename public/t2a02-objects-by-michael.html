@@ -35,7 +35,7 @@ let myPerson = {
  
 
 
- 
+ <script>
 
 Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eyecolor"><br>
 
@@ -55,7 +55,7 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
                             
  }">                           
  
-           
+ </script> 
 
 <div id="myDiv01">...</div>
 
@@ -73,12 +73,12 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
                            }
  
  document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
-            document.getElementById('myDiv01').innerHTML += 'first Name: ' + myPerson.firstName + '<br>'
-            document.getElementById('myDiv01').innerHTML += 'last Name: ' + myPerson.lastName + '<br>'                                   
-            document.getElementById('myDiv01').innerHTML += 'age: ' + myPerson.age + '<br>'
-            document.getElementById('myDiv01').innerHTML += 'eye color: ' + myPerson.eyeColor + '<br>'   
+            document.getElementById('myDiv02').innerHTML += 'first Name: ' + myPerson.firstName + '<br>'
+            document.getElementById('myDiv02').innerHTML += 'last Name: ' + myPerson.lastName + '<br>'                                   
+            document.getElementById('myDiv02').innerHTML += 'age: ' + myPerson.age + '<br>'
+            document.getElementById('myDiv02').innerHTML += 'eye color: ' + myPerson.eyeColor + '<br>'   
  
  </script>
 
-                                               
+             <div id="myDiv02">...</div>                                  
         </body>                                       
