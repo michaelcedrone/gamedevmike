@@ -35,7 +35,7 @@ let myPerson = {
  
 
 
- <script>
+
 
 Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eyecolor"><br>
 
@@ -43,7 +43,7 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
                    
                     let myName = document.getElementById('myText01').value
                            if (myName == 'name' || myName == 'Name' ){                                            
-                          document.getElementById('myDiv01').innerHTML = myName':' + myPerson.firstName                                       
+                          document.getElementById('myDiv01').innerHTML += myName':' + myPerson.firstName                                       
                               }                               
                                                                 
           let myPerson = {
@@ -55,7 +55,7 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
                             
  }">                           
  
- </script> 
+
 
 <div id="myDiv01">...</div>
 
