@@ -39,9 +39,9 @@ let myPerson = {
 
 Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eyecolor"><br>
 
-<input type=button value="Enter" onClick=(johnFun)"{   
+<input type=button value="Enter" onClick="{   
                                                                 
-         
+         document.getElementById('myDiv01').innerHTML = myFunc()
  }">                           
  
 
@@ -54,7 +54,7 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
  <br>
  <script>
   
-  function johnFun(){
+  function myFunc(){
   
            let myPerson = {
                              'firstName': 'John',
