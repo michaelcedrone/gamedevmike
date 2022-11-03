@@ -63,17 +63,7 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
                              'eyeColor' : 'blue'                                   
            }
                                           
-                                          
-                        let myMike = document.getElementById('myText01').value                  
-                      if (myMike == 'name' || myMike == 'Name' ){
-                            document.getElementById('myDiv01').innerHTML += document.getElementById('myPerson').firstName + '<br>'
-                           } else { 
-                            document.getElementById('myDiv01').innerHTML += document.getElementById('myPerson').lastName + '<br>'
-                                    }
-  
-  
-  }
-  
+
   
   document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
             document.getElementById('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
@@ -81,7 +71,7 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
             document.getElementById('myDiv01').innerHTML += 'age: ' + myPerson.age + '<br>'
             document.getElementById('myDiv01').innerHTML += 'eyeColor: ' + myPerson.eyeColor + '<br>'   
  
-
+  }
  </script>
  
  
