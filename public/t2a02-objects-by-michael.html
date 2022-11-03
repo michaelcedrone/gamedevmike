@@ -39,33 +39,9 @@ let myPerson = {
 
 Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eyecolor"><br>
 
-<input type=button value="Enter" onClick="{   
+<input type=button value="Enter" onClick=(johnFun)"{   
                                                                 
-          let myPerson = {
-                             'firstName': 'John',
-                             'lastName': 'Doe',
-                             'age': 50,
-                             'eyeColor': 'blue',                                   
-                           }
-                                          
-                                          
-                        let myMike = document.getElementById('myText01').value                  
-                      if (myMike == 'name' || myMike == 'Name' ){
-                            document.getElementById('myDiv01').innerHTML += myMike + myPerson.firstName + '<br>'
-                           } else { 
-                            document.getElementById('myDiv01').innerHTML += myMike + myPerson.lastName + '<br>'
-                                    }
-                                            
-                                          
-                                          
-                                          
-                                          
-            document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
-            document.getElementById('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
-            document.getElementById('myDiv01').innerHTML += 'lastName: ' + myPerson.lastName + '<br>'                                   
-            document.getElementById('myDiv01').innerHTML += 'age: ' + myPerson.age + '<br>'
-            document.getElementById('myDiv01').innerHTML += 'eyeColor: ' + myPerson.eyeColor + '<br>'   
-                            
+         
  }">                           
  
 
@@ -78,19 +54,34 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
  <br>
  <script>
   
-  let myPerson = {
+  function johnFun(){
+  
+           let myPerson = {
                              'firstName': 'John',
                              'lastName': 'Doe',
                              'age': 50,
                              'eyeColor': 'blue',                                   
                            }
+                                          
+                                          
+                        let myMike = document.getElementById('myText01').value                  
+                      if (myMike == 'name' || myMike == 'Name' ){
+                            document.getElementById('myDiv01').innerHTML += myPerson.firstName + '<br>'
+                           } else { 
+                            document.getElementById('myDiv01').innerHTML += myPerson.lastName + '<br>'
+                                    }
+  
+  
+  }
+  
+  
+  document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
+            document.getElementById('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
+            document.getElementById('myDiv01').innerHTML += 'lastName: ' + myPerson.lastName + '<br>'                                   
+            document.getElementById('myDiv01').innerHTML += 'age: ' + myPerson.age + '<br>'
+            document.getElementById('myDiv01').innerHTML += 'eyeColor: ' + myPerson.eyeColor + '<br>'   
  
- document.getElementById('myDiv02').innerHTML = '<br>myPerson Object has properties: <br>'
-            document.getElementById('myDiv02').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
-            document.getElementById('myDiv02').innerHTML += 'lastName: ' + myPerson.lastName + '<br>'                                   
-            document.getElementById('myDiv02').innerHTML += 'age: ' + myPerson.age + '<br>'
-            document.getElementById('myDiv02').innerHTML += 'eyeColor: ' + myPerson.eyeColor + '<br>'   
- 
+
  </script>
 
              <div id="myDiv02">...</div>                                  
