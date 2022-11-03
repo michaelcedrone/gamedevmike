@@ -61,17 +61,17 @@ Nothing: <input type=text id="myText01" value="Enter: name, surname, age, or eye
                              'lastName' : 'Doe',
                              'age' : 50,
                              'eyeColor' : 'blue'                                   
-                           
+           }
                                           
                                           
                         let myMike = document.getElementById('myText01').value                  
                       if (myMike == 'name' || myMike == 'Name' ){
-                            document.getElementById('myDiv01').innerHTML += myPerson.firstName + '<br>'
+                            document.getElementById('myDiv01').innerHTML += document.getElementById('myPerson.firstName') + '<br>'
                            } else { 
-                            document.getElementById('myDiv01').innerHTML += myPerson.lastName + '<br>'
+                            document.getElementById('myDiv01').innerHTML += document.getElementById('myPerson.lastName') + '<br>'
                                     }
   
-  }
+  
   }
   
   
