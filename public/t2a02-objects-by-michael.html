@@ -65,6 +65,17 @@ let myPerson = {
            }
   
   
+  
+  const person = {
+ name: "Tony Stark",
+ age: 40,
+ gender: "male",
+ character: "Iron man"
+}
+
+
+  
+  
  </script>
  
  
@@ -82,7 +93,19 @@ let myPerson = {
             document.getElementById('myDiv02').innerHTML += 'eyeColor: ' + myPerson.eyeColor + '<br>'   
  }">                  
  
- 
 
-             <div id="myDiv02">...</div>                                  
+             <div id="myDiv02">...</div>   
+ 
+ 
+ 
+ <br>
+ 
+ 
+ <input type=button value="Enter" onClick="{  
+                                           
+            document.getElementById('myDiv03').innerHTML +=  Object.entries(person) + '<br>'       
+ }">                  
+ 
+ <div id="myDiv03">...</div>   
+ 
         </body>                                       
