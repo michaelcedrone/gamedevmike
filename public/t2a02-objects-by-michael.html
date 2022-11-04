@@ -77,16 +77,32 @@ let myPerson = {
 }
 
 
-  var img = document.getElementById('img1');
-document.getElementById('btn1').addEventListener('click', (ev)=>{
- //gets the image height and width
- let h = img.height;
- let w = img.width;
+  let imgInput = document.getElementById('image-input');
+        imgInput.addEventListener('change', function (e) {
+            if (e.target.files) {
+                let imageFile = e.target.files[0];
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var img = document.createElement("img");
+                    img.onload = function (event) {
+                        // Dynamically create a canvas element
+                        var canvas = document.createElement("canvas");
 
- //increases height and width by 50%
- img.height = h *1.5;
- img.width = w *1.5;
-});
+                        // var canvas = document.getElementById("canvas");
+                        var ctx = canvas.getContext("2d");
+
+                        // Actual resizing
+                        ctx.drawImage(img, 0, 0, 300, 300);
+
+                        // Show resized image in preview element
+                        var dataurl = canvas.toDataURL(imageFile.type);
+                        document.getElementById("preview").src = dataurl;
+                    }
+                    img.src = e.target.result;
+                }
+                reader.readAsDataURL(imageFile);
+            }
+        });
   
   
  </script>
@@ -126,9 +142,12 @@ document.getElementById('btn1').addEventListener('click', (ev)=>{
  <br>
  <br>
  
+ <div>
+        <input type="file" id="image-input" accept="https://i.pinimg.com/originals/36/26/24/362624d9b105d5af3a0c3751659553e1.png">
+        <img id="preview"></img>
+    </div>
 
-<img src='https://i.pinimg.com/originals/36/26/24/362624d9b105d5af3a0c3751659553e1.png' alt='Smile' height='115' width='130' id='img1'/><br>
-<button id='btn1'>Feed mario mushrooms</button>
+    
 
 
  
