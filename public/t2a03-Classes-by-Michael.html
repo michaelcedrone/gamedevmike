@@ -8,6 +8,11 @@
     background-color:rgb(253, 250, 165);
     border: 2px solid blue;
 }
+        
+        
+         .bg-yellow {
+        background-color: yellow;
+      }
 
 </style>
 
@@ -48,6 +53,26 @@ Nothing: <input type=text id="myText01" values="Useless at the moment"><br>
        myDog = new myAnimal('Snickers', 5)
        myDog.myShow()
        }">
-         
+ 
          <div id="myDiv01">...</div>
+                          
+                          
+                          
+            <script>              
+                          
+     const boxes = document.querySelectorAll('.box1, .box2, .box3');
+
+for (const box of boxes) {
+  box.addEventListener('click', function handleClick() {
+    box.classList.add('bg-yellow');
+  });
+}
+                
+ </script>
+                          
+                          
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+
        
