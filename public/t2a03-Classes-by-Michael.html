@@ -73,3 +73,15 @@ Nothing: <input type=text id="myText01" values="Useless at the moment"><br>
     <script src="index.js"></script>
   </body>
 </html>
+
+                          <script>
+                          
+const boxes = document.querySelectorAll('.box1, .box2, .box3');
+
+for (const box of boxes) {
+  box.addEventListener('click', function handleClick() {
+    box.classList.add('bg-yellow');
+  });
+}
+                          
+                          </script>
