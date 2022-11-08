@@ -4,15 +4,18 @@
 <br>
 <input type=text id="hoursId" value=1>
 <br>
-<input type=text id="taxId" value=1>
+<input type=text id="taxId" value=30>
 
 <script>
   
   myNum = 0
   
-  function mySalary {
-    
-  }
+  function myPay(){
+    let mySalary = (document.getElementById('salaryId').value)
+    let myHours = (document.getElementById('hoursId').value)
+    let myTax = (document.getElementById('taxId').value)
+    mySalary * myHours
+    return myRemainder
  
   
   
