@@ -13,7 +13,8 @@
     let myHours = parseInt(document.getElementById('hoursId').value)
     let myTax = parseInt(document.getElementById('taxId').value)
     let myTotal = mySalary * myHours
-    let myRemain = myTotal / myTax
+    let myTrueTax = myTax / 100
+    let myRemain = myTotal / myTrueTax
     return myRemain
   }
   
