@@ -8,12 +8,10 @@
 
 <script>
   
-  myNum = 0
-  
   function myPay(){
-    let mySalary = (document.getElementById('salaryId').value)
-    let myHours = (document.getElementById('hoursId').value)
-    let myTax = (document.getElementById('taxId').value)
+    let mySalary = parseInt(document.getElementById('salaryId').value)
+    let myHours = parseInt(document.getElementById('hoursId').value)
+    let myTax = parseInt(document.getElementById('taxId').value)
     let myTotal = mySalary * myHours
     let myRemain = myTotal % myTax
     return myRemain
@@ -27,4 +25,4 @@
                                                      document.getElementById('myDiv01').innerHTML = myPay()
                                                      }"><br><br>
         
-        <div id="myDiv01">..</div><br>
+        <div id="myDiv01">...</div><br>
