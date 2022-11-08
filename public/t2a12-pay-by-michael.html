@@ -14,8 +14,9 @@
     let mySalary = (document.getElementById('salaryId').value)
     let myHours = (document.getElementById('hoursId').value)
     let myTax = (document.getElementById('taxId').value)
-    mySalary * myHours
-    return myRemainder
+    let myTotal = mySalary * myHours
+    let myRemain = myTotal % myTax
+    return myRemain
  
   
   
