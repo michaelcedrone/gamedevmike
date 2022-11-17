@@ -112,17 +112,35 @@
       if (myString[myLoop] == '7') {myTemp  = '^'}                                      
       if (myString[myLoop] == '8') {myTemp  = '('}
       if (myString[myLoop] == '9') {myTemp  = ')'}
-      if (myString[myLoop] == '.') {myTemp  = '$'}                                      
-      if (myString[myLoop] == '\"') {myTemp  = ','}                            
+      if (myString[myLoop] == '.') {myTemp  = '$'}                                                             
                                            
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
 }"><br><br>
-
-
         
         
+        <script>
+             
+                
+        function myFunc (){
+                let myTemp = ''
+   myString = document.getElementById('myArea01').value.split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      
+      if (myString[myLoop] == '\"') {myTemp  = 'a&a'}                                      
+       if (myString[myLoop] == '\'') {myTemp  = 'b&b'}                          
+                                           
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myArea02').value = myString.join('')
+        }
+        
+                
+        </script>
+
+
 
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
 
