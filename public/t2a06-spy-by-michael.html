@@ -113,7 +113,8 @@
       if (myString[myLoop] == '8') {myTemp  = '('}
       if (myString[myLoop] == '9') {myTemp  = ')'}
       if (myString[myLoop] == '.') {myTemp  = '$'}                                                             
-                                           
+      if (myString[myLoop] == '\"') {myTemp  = 'a@a'}
+                                            
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
