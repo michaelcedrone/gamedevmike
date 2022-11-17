@@ -75,9 +75,13 @@ function myCheckHit(){
             }
             function moveLeft() {
                 objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
-            }
-            function moveUp() {
-                objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
+            }   
+                     var interval = setInterval(function moveUp() {
+                           x++;
+                     $('objImage').css('top', 50 - (-0.1 * x * (x - 50)));
+    
+                        if(x >= 50) clearInterval(interval);
+                           }, 20);
             }
             function moveRight() {
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
