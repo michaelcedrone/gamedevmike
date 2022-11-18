@@ -29,7 +29,7 @@
     // Function to render the canvas
     function rendercanvas(){
         ctx.fillStyle = "#F0F8FF";
-        ctx.fillRect(0, 0, 270, 270);
+        ctx.fillRect(0, 0, 500, 500);
     }
     // Function to render the player
     function renderplayer(){
@@ -43,7 +43,7 @@
                 {
                 x: 100 * i,
                 y: 200 + (30 * i),
-                z: 250 + (100 * i),    
+                z: 300 + (100 * i),    
                 width: 110,
                 height: 15
                 }
@@ -122,6 +122,12 @@
         platforms[1].y < player.y && player.y < platforms[1].y + platforms[1].height){
             i = 1;
         }
+        if(platforms[2].x < player.x && player.x < platforms[2].x + platforms[2].width &&
+        platforms[2].y < player.y && player.y < platforms[2].y + platforms[2].height){
+            i = 2;
+        }
+        
+        
         if (i > -1){
             player.jump = false;
             player.y = platforms[i].y;    
