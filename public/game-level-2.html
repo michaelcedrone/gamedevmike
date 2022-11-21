@@ -46,7 +46,11 @@
    let myGlobalX = 0
    let myClock
 
-
+function mygravity() {
+   objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+   
+}
+   setInterval(mygravity,100)
    // global functions here
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
