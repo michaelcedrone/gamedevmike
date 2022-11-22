@@ -48,6 +48,10 @@
 
 function mygravity() {
    objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+   if(objImage.style.top <= 300px){
+      document.getElementById('myImg01').style.top = '-5px'
+      return true
+   }
 }
    
    
@@ -89,11 +93,7 @@ function myCheckHit(){
 
 
    
-   function myFloor() {
-   if (myImg01.style.top <= 300px;)
-      document.getElementById('myImg01').style.top = '-5px'
-   }
-}
+  
    
    
 </script>
