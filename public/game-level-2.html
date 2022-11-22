@@ -56,56 +56,6 @@ function mygravity() {
 
    
    
-    var num = 1;
-    // The platforms
-    var platforms = [];
-
-   
-    // Function to create platforms
-    function createplat(){
-        for(i = 0; i < num; i++) {
-            platforms.push(
-                {
-                x: 300 * i,
-                width: 9000,
-                height: 15
-                }
-            );
-        }
-        }
-    // Function to render platforms
-    function renderplat(){
-        ctx.fillStyle = "#45597E";
-        ctx.fillRect(platforms[0].x, platforms[0].y, platforms[0].width, platforms[0].height);
-        
-    }
-   
-   
-        // Updating the y and x coordinates of the player
-        player.y += player.y_v;
-        player.x += player.x_v;
-        // A simple code that checks for collions with the platform
-        let i = -1;
-        if(platforms[0].x < player.x && player.x < platforms[0].x + platforms[0].width &&
-        platforms[0].y < player.y && player.y < platforms[0].y + platforms[0].height){
-            i = 0;
-        }
-       
-        
-        if (i > -1){
-            player.jump = false;
-            player.y = platforms[i].y;    
-        }
-        // Rendering the canvas, the player and the platforms
-        rendercanvas();
-        renderplayer();
-        renderplat();
-    }
-    createplat(); 
-   
-   
-   
-   
    // global functions here
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
