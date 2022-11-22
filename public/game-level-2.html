@@ -47,22 +47,13 @@
    let myClock
 
 function mygravity() {
-   let myGrav = 5
-   
-   let height = document.getElementById('myImg01').style.top
-   
-   if (height >= 6000 + "px") {
-   let myGrav = 0
-   }
-   
-   objImage.style.top = parseInt(objImage.style.top) + myGrav + "px";
-
-   
+ objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
 }
+   
 
-   window.onload = function() {
+
    setInterval(mygravity,100)
-   }
+
    
    
     var num = 1;
