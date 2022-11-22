@@ -59,12 +59,96 @@ function mygravity() {
 
    
 }
-   
-   
-   
+
    window.onload = function() {
    setInterval(mygravity,100)
    }
+   
+   
+    var num = 3;
+    // The platforms
+    var platforms = [];
+
+   
+    // Function to create platforms
+    function createplat(){
+        for(i = 0; i < num; i++) {
+            platforms.push(
+                {
+                x: 100 * i,
+                y: 200 + (30 * i),
+                z: 300 + (100 * i),    
+                width: 110,
+                height: 15
+                }
+            );
+        }
+        }
+    // Function to render platforms
+    function renderplat(){
+        ctx.fillStyle = "#45597E";
+        ctx.fillRect(platforms[0].x, platforms[0].y, platforms[0].width, platforms[0].height);
+        ctx.fillRect(platforms[1].x, platforms[1].y, platforms[1].width,platforms[1]. height);
+        ctx.fillRect(platforms[2].x, platforms[2].y, platforms[2].width,platforms[2]. height);
+    
+        
+    }
+   
+    
+    
+    function loop() {
+        // If the player is not jumping apply the effect of frictiom
+        if(player.jump == false) {
+            player.x_v *= friction;
+        } else {
+            // If the player is in the air then apply the effect of gravity
+            player.y_v += gravity;
+        }
+        player.jump = true;
+        // If the left key is pressed increase the relevant horizontal velocity
+        if(keys.left) {
+            player.x_v = -2.5;
+        }
+        if(keys.right) {
+            player.x_v = 2.5;
+        }
+        // Updating the y and x coordinates of the player
+        player.y += player.y_v;
+        player.x += player.x_v;
+        // A simple code that checks for collions with the platform
+        let i = -1;
+        if(platforms[0].x < player.x && player.x < platforms[0].x + platforms[0].width &&
+        platforms[0].y < player.y && player.y < platforms[0].y + platforms[0].height){
+            i = 0;
+        }
+        if(platforms[1].x < player.x && player.x < platforms[1].x + platforms[1].width &&
+        platforms[1].y < player.y && player.y < platforms[1].y + platforms[1].height){
+            i = 1;
+        }
+        if(platforms[2].x < player.x && player.x < platforms[2].x + platforms[2].width &&
+        platforms[2].y < player.y && player.y < platforms[2].y + platforms[2].height){
+            i = 2;
+        }
+        
+        
+        if (i > -1){
+            player.jump = false;
+            player.y = platforms[i].y;    
+        }
+        // Rendering the canvas, the player and the platforms
+        rendercanvas();
+        renderplayer();
+        renderplat();
+    }
+    canvas=document.getElementById("canvas");
+    ctx=canvas.getContext("2d");
+    ctx.canvas.height = 500;
+    ctx.canvas.width = 500;
+    createplat();
+   
+   
+   
+   
    // global functions here
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
