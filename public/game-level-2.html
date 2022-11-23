@@ -48,11 +48,13 @@
 
 function mygravity() {
  objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
-   return
+   if(parseInt('objImage').style.top) >= 300px) {
+      parseInt('objImage').style.top - 5 + "px";
+      return true
 }
    
 function myFloor() {
-   if(parseInt('objImage').style.top) == 300) {
+   if(parseInt('objImage').style.top) >= 300px) {
       parseInt('objImage').style.top - 5 + "px";
       return true
    }
