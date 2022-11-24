@@ -57,9 +57,10 @@
    let myClock
 
 function mygravity() {
+if( parseInt(document.getElementById('myImg01').style.top)    <= 100){
  objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+ }
    }
-
   
 
    setInterval(mygravity,100)
