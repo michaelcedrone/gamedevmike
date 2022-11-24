@@ -100,7 +100,7 @@ function myCheckHit(){
    top2    = parseInt(document.getElementById(my2).style.top)   
    bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
    if ((bottom1 <=  top2   ) &&
-       (top1    >=  bottom2) ){
+       (top1    <=  bottom2) ){
        return true
    }
 }
