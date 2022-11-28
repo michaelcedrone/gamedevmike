@@ -106,7 +106,7 @@ function myObstacle(){
    
 </script>
 
-<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 600px; left:900px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 900px; left:900px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
 <img id="myImg02" style="position:absolute; width:100px; height:80px; top: 600px; left:100px;" src="https://freepngimg.com/thumb/toyota/17-toyota-png-image-car-image.png">
 <img id="myImg03" style="position:absolute; width:100px; height:80px; top: 600px; left:700px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
    
@@ -142,7 +142,7 @@ function myObstacle(){
              myObstacle()
             }
             function moveUp() {
-             if( parseInt(document.getElementById('myImg01').style.top)    >= 600){
+             if( parseInt(document.getElementById('myImg01').style.top)    <= 600){
                 objImage.style.top = parseInt(objImage.style.top) - 200 + "px";
                myCheckHit()
               myObstacle()
