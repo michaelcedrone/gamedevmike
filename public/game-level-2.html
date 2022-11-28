@@ -130,18 +130,18 @@ function myCheckHit(){
                 }
             }
             function moveLeft() {
-                objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
+                objImage.style.left = parseInt(objImage.style.left) - 15 + "px";
                myCheckHit()
             }
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 305){
-                objImage.style.top = parseInt(objImage.style.top) - 100 + "px";
+                objImage.style.top = parseInt(objImage.style.top) - 200 + "px";
                myCheckHit()
               }
             }
      
             function moveRight() {
-                objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
+                objImage.style.left = parseInt(objImage.style.left) + 15 + "px";
                myCheckHit()
             }
             window.onload = init;
