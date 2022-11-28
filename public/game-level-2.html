@@ -156,17 +156,20 @@ function myObstacle(){
             function moveLeft() {
                 objImage.style.left = parseInt(objImage.style.left) - 15 + "px";
                myCheckHit()
+             myHitSpike()
             }
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 305){
                 objImage.style.top = parseInt(objImage.style.top) - 200 + "px";
                myCheckHit()
+              myHitSpike()
               }
             }
      
             function moveRight() {
                 objImage.style.left = parseInt(objImage.style.left) + 15 + "px";
                myCheckHit()
+             myHitSpike()
             }
             window.onload = init;
             
