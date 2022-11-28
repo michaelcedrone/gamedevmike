@@ -112,7 +112,7 @@ function myCheckHit(){
  
   
 function myObstacle(){
-   if ( myHitSipike('myImg01','myImg03') ){
+   if ( myHitSpike('myImg01','myImg03') ){
        alert('You Lose')  
        document.getElementById('myImg01').style.left = '5px'
        location = 't2a11-game-template-michael.html'  // go to your next level
@@ -155,20 +155,20 @@ function myObstacle(){
             }
             function moveLeft() {
                 objImage.style.left = parseInt(objImage.style.left) - 15 + "px";
-               myCheckHit()
+               myCheckHit();
              myHitSpike()
             }
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 305){
                 objImage.style.top = parseInt(objImage.style.top) - 200 + "px";
-               myCheckHit()
+               myCheckHit();
               myHitSpike()
               }
             }
      
             function moveRight() {
                 objImage.style.left = parseInt(objImage.style.left) + 15 + "px";
-               myCheckHit()
+               myCheckHit();
              myHitSpike()
             }
             window.onload = init;
