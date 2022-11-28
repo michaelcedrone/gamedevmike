@@ -287,17 +287,17 @@ function myCheckHit(){
                myCheckHit()
             }
             function moveUp() {
-                objImage.style.top = parseInt(objImage.style.top) - 20 + "px";
+             if( parseInt(document.getElementById('myImg01').style.top)    >= 305){
+                objImage.style.top = parseInt(objImage.style.top) - 100 + "px";
                myCheckHit()
+              }
             }
+
             function moveRight() {
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
                myCheckHit()
             }
-            function moveDown() {
-                objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
-               myCheckHit()
-            }
+           
             window.onload = init;
             
         </script>
