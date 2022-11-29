@@ -95,6 +95,14 @@ function myObstacle(){
        location = 't2a11-game-template-michael.html'  // go to your next level
    }
 }
+ 
+ function myObstacle2(){
+   if ( myHitOther('myImg01','myImg04') ){
+       alert('You Lose')  
+       document.getElementById('myImg01').style.left = '-900px'
+       location = 't2a11-game-template-michael.html'  // go to your next level
+   }
+}
 
    
    
@@ -103,7 +111,7 @@ function myObstacle(){
 <img id="myImg01" style="position:absolute; width:100px; height:80px; top: 200px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
 <img id="myImg02" style="position:absolute; width:100px; height:80px; top: 390px; left:1000px;" src="https://freepngimg.com/thumb/toyota/17-toyota-png-image-car-image.png">
 <img id="myImg03" style="position:absolute; width:500px; height:80px; top: 590px; left:0px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-   
+<img id="myImg04" style="position:absolute; width:500px; height:80px; top: 590px; left:1000px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">   
 
    
     <script type="text/javascript">
