@@ -52,21 +52,19 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.clearRect(20, 20, 50, 50);
 }">
 
+<input type=button value="rectangle" onclick="{
+  let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
+   myContext.fillStyle = myGradient;
+   myContext.fillRect(100, 300, 200, 400);
+   // reset fillstyle
+   myContext.fillStyle = 'black';
+}">
+
 <input type=button value="Clear all" onclick="{
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
 
-<input type=button value=".fillText('Hello World', 400, 100)" onclick="{
- myContext.background(255);
-  myContext.fill(0,0,255);
-  myContext.rect(300,300,200,200);
-  myContext.fill(0,150,75);
-  myContext.rect(200,100,50,50);
-  myContext.fill(255,90,0);
-  myContext.rect(400,200,100,50);
-  myContext.fill(255,0,0);
-  myContext.rect(350,350,50,200);
-}">
+
 
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;"></canvas>
 
