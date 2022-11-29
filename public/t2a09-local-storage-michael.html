@@ -40,6 +40,23 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
    document.getElementById('myText1').value = localStorage.getItem('myStoredText')
 }"> 
 
+      
+        
+        
+        <input id="myText2" type=text size=70 value="" placeholder="Here is your score"><br>
+        
+        <input type="button" value="press for points" onClick="{
+   document.getElementById('myText2').value = localStorage.getItem('myStoredText')
+}"> 
+        
         
         </center>
    </body>
+
+        <script>
+                
+             function myScore(){
+                 document.getElementById('myText2').value += 1    
+             }
+                
+        </script>
