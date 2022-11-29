@@ -42,45 +42,22 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
 
       
         
+     
         
-        <input id="myText2" type=text size=70 value="" placeholder="Here is your score"><br>
-        
-        <input type="button" value="press for points" onClick="{
-   document.getElementById('myText2').value = addLemons()
-}"> 
-        
+	
+	<button id="button">0</button>
+<button onclick="myFunction()">Number go up</button>
         
         </center>
    </body>
 
         <script>
-                
-            //Basic variables (the currency in this example is lemons)
-var incrementInterval = 10 //This is done so the code in the setInterval function runs 10 times per second
-var lemons = 0.0
-var lemonsPerClick = 1.0
-var lemonsPerIncrement = 0.0
-
-//Function for clicking to get lemons
-function addLemons() {
-	lemons += lemonsPerClick
-	updateLemons()
+		
+        function myFunction(){
+  const numberElement = document.getElementById("button");
+  const number = parseInt(numberElement.innerText, 10) + 1;
+  numberElement.innerText = number;
 }
 
-//Function for updating the lemon counter
-function updateLemons() {
-	document.getElementById("lemonCounter").innerHTML = `Lemons: ${Math.floor(lemons)}`
-}
-
-//Function that returns the target's value if it were to be divided into 1 second relative to milleseconds
-function incrementValue(target) {
-	return target / (1000 / (incrementInterval * 10)) //Target divided by one second
-}
-
-//Function that runs the following code repeatedly (function, milleseconds before running again)
-setInterval(function() {
-	lemons += incrementValue(lemonsPerIncrement)
-	updateLemons()
-}, incrementInterval * 10)
                 
         </script>
