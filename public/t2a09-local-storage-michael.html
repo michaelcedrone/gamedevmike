@@ -49,8 +49,7 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
 <button onclick="myFunction()">Number go up</button>
         
 	
-	<textarea id="myTextarea" rows="10" cols="80"></textarea>
-    <p></p>
+	
     <button onclick="mySave()">Save</button>
     <button onclick="myLoad()">Load</button>
    
@@ -70,12 +69,12 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
 
 		
 		 function mySave() {
-        var myContent = document.getElementById("button").value;
+        var myContent = document.getElementById("button").innerHTML;
         localStorage.setItem("myContent", myContent);
       }
       function myLoad() {
         var myContent = localStorage.getItem("myContent");
-        document.getElementById("button").value = myContent;
+        document.getElementById("button").innerHTML = myContent;
       }
                 
         </script>
