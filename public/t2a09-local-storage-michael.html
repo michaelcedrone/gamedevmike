@@ -43,10 +43,10 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
       
         
         
-        <input id="myText2" type=text size=70 value="" placeholder="Here is your score"><br>
+        <input id="myText2" type=number size=70 value="" placeholder="Here is your score"><br>
         
         <input type="button" value="press for points" onClick="{
-   document.getElementById('myText2').value = localStorage.getItem('myStoredText')
+   document.getElementById('myText2').value = myScore()
 }"> 
         
         
