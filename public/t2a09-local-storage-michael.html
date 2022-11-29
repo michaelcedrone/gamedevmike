@@ -1,6 +1,22 @@
 
 <h2>t2a09-local-storage-name by Fred. Instructions:</h2>
 
+<style>
+        
+      body {
+    background-image: url("");
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(253, 250, 165);
+    border: 2px solid blue;
+}
+
+</style>
+
+<body>
+
+
 <body onload="{
    myStorage = localStorage.getItem('myStoredText')
    if(myStorage  != null){
@@ -23,3 +39,5 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
 <input type="button" value="Retrieve Text" onClick="{
    document.getElementById('myText1').value = localStorage.getItem('myStoredText')
 }"> 
+
+   </body>
