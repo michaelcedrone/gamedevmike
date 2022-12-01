@@ -52,6 +52,8 @@
 
 <script>
 
+ let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
+ 
    // global variables here
    let myGlobalX = 0
    let myClock
@@ -145,6 +147,7 @@ function myObstacle(){
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
                 objImage.style.top = parseInt(objImage.style.top) - 200 + "px";
+                 mySound2.play()
                myCheckHit()
               myObstacle()
               }
