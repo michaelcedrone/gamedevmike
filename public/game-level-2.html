@@ -53,7 +53,7 @@
 <script>
 
  let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
- 
+ let mySound3 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Death%20-%20QuickSounds.com.mp3')
    // global variables here
    let myGlobalX = 0
    let myClock
@@ -102,6 +102,7 @@ function myObstacle(){
        alert('You Lose')  
        document.getElementById('myImg01').style.left = '5px'
        location = 't2a11-game-template-michael.html'  // go to your next level
+       mySound3.play()
    }
 }
 
