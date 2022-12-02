@@ -62,6 +62,7 @@ function mygravity() {
 if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
  objImage.style.top = parseInt(objImage.style.top) + 8 + "px";
  myObstacle()
+ myObstacle2()
  }
    }
   
@@ -153,6 +154,7 @@ function myObstacle(){
                 objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
                myCheckHit()
              myObstacle()
+             myObstacle2()
             }
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
@@ -160,6 +162,7 @@ function myObstacle(){
                  mySound2.play()
                myCheckHit()
               myObstacle()
+              myObstacle2()
               }
             }
      
@@ -167,6 +170,7 @@ function myObstacle(){
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
                myCheckHit()
              myObstacle()
+             myObstacle2()
             }
             window.onload = init;
             
