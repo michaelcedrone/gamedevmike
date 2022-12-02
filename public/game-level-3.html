@@ -45,6 +45,9 @@
 
 <script>
 
+ 
+  let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
+ let mySound3 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Death%20-%20QuickSounds.com.mp3')
    // global variables here
    let myGlobalX = 0
    let myClock
@@ -91,6 +94,7 @@ function myCheckHit(){
   
 function myObstacle(){
    if ( myHitOther('myImg01','myImg03') ){
+       mySound3.play()
        alert('You Lose')  
        document.getElementById('myImg01').style.left = '-900px'
        location = 't2a11-game-template-michael.html'  // go to your next level
@@ -99,6 +103,7 @@ function myObstacle(){
  
  function myObstacle2(){
    if ( myHitOther('myImg01','myImg04') ){
+        mySound3.play()
        alert('You Lose')  
        document.getElementById('myImg01').style.left = '-900px'
        location = 't2a11-game-template-michael.html'  // go to your next level
@@ -148,6 +153,7 @@ function myObstacle(){
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
                 objImage.style.top = parseInt(objImage.style.top) - 200 + "px";
+                mySound2.play()
                myCheckHit()
               myObstacle()
               myObstacle2()
