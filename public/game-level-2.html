@@ -99,9 +99,9 @@ function myCheckHit(){
   
 function myObstacle(){
    if ( myHitOther('myImg01','myImg03') ){
+       mySound3.play()
        alert('You Lose')  
        document.getElementById('myImg01').style.left = '5px'
-       mySound3.play()
        location = 't2a11-game-template-michael.html'  // go to your next level
    }
 }
