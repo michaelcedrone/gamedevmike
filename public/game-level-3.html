@@ -8,17 +8,7 @@
    <h4> Use arrow keys to allow mario to jump infront of the car </h4>
    
    
-   
-<input type=button value="Auto Background Left" onclick="{
-  clearInterval(myClock)
-  let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myGlobalX -= 5
-      myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
-    
-}">
+ <div id="myCounter">0</div>
    
    
 </head>
@@ -57,6 +47,7 @@ if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
  objImage.style.top = parseInt(objImage.style.top) + 8 + "px";
  myObstacle()
  myObstacle2()
+ myCoin()
  }
    }
   
@@ -109,6 +100,14 @@ function myObstacle(){
        location = 't2a11-game-template-michael.html'  // go to your next level
    }
 }
+ 
+  function myCoin(){
+   if ( myHitOther('myImg01','myImg05') ){
+        mySound3.play() 
+       document.getElementById('myImg05').style.left = '9000px'
+       document.getElementById('myCounter').innerHTML ++
+   }
+}
 
    
    
@@ -118,7 +117,7 @@ function myObstacle(){
 <img id="myImg02" style="position:absolute; width:100px; height:80px; top: 390px; left:1000px;" src="https://freepngimg.com/thumb/toyota/17-toyota-png-image-car-image.png">
 <img id="myImg03" style="position:absolute; width:500px; height:80px; top: 590px; left:0px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
 <img id="myImg04" style="position:absolute; width:500px; height:80px; top: 590px; left:1000px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">   
-
+<img id="myImg05" style="position:absolute; width:500px; height:80px; top: 490px; left:500px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
    
     <script type="text/javascript">
             //init object globally
@@ -149,6 +148,7 @@ function myObstacle(){
                myCheckHit()
              myObstacle()
              myObstacle2()
+             myCoin()
             }
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
@@ -157,6 +157,7 @@ function myObstacle(){
                myCheckHit()
               myObstacle()
               myObstacle2()
+              myCoin()
               }
             }
      
@@ -165,6 +166,7 @@ function myObstacle(){
                myCheckHit()
              myObstacle()
              myObstacle2()
+             myCoin()
             }
             window.onload = init;
             
