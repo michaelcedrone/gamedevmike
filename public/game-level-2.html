@@ -44,14 +44,14 @@
 
 function mygravity() {
 if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
- objImage.style.top = parseInt(objImage.style.top) + 1 + "px";
+ objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
  myObstacle()
  myObstacle2()
  }
    }
   
 
-   setInterval(mygravity,10)
+   setInterval(mygravity,100)
    
    // global functions here
 function myHitOther(my1,my2){
