@@ -6,9 +6,10 @@
 
 <head>
  
-   <h4> coins collected: </h4> 
+   <h4> coins collected: 
  <div id="myCounter">0</div>
    
+    </h4> 
    
 </head>
 
@@ -40,6 +41,8 @@
  
   let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
  let mySound3 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Death%20-%20QuickSounds.com.mp3')
+ let mySound4 = new Audio(' https://michaelcedrone.github.io/gamedevmike/public/mixkit-fairy-arcade-sparkle-866.wav')
+
    // global variables here
    let myGlobalX = 0
    let myClock
@@ -105,7 +108,7 @@ function myObstacle(){
  
   function myCoin(){
    if ( myHitOther('myImg01','myImg05') ){
-        mySound3.play() 
+        mySound4.play() 
        document.getElementById('myImg05').style.left = '9000px'
        document.getElementById('myCounter').innerHTML ++
    }
