@@ -1,19 +1,29 @@
 
 <h6> Version 0.0.1 </h6>
 
- <h1 align=center>Level Three!</h1>
+ <h1 align=center>Level Four!</h1>
 <br><br><br><br>
 
 <head>
  
    <h4> coins collected: 
  <div id="myCounter">2</div>
+    
+    </h4> 
     <br><br>
     
-    <div> Pay 3 coins to go to next level! </div>
+    <h2> Pay 3 coins to go to next level! </h2>
+    <div id="myWall">...</div>
     
+    <input type=button value="spend 3 coins..." onClick="{
+                                                 let myIn01 = document.getElementById('myCounter').innerHTML
+                                                 if (myIn01 == 3){
+                                                 document.getElementById('myWall').innerHTML = myIn01 + ' link'
+                                               } else {
+                                               document.getElementById('myWall').innerHTML = myIn01 + ' is not enough'}
+                                       }">
    
-    </h4> 
+    
    
 </head>
 
