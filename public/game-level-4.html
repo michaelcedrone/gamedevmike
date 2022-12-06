@@ -13,14 +13,12 @@
     <br><br>
     
     <h2> Pay 3 coins to go to next level! </h2>
-    <div id="myWall">...</div>
     
     <input type=button value="spend 3 coins..." onClick="{
                                                  let myIn01 = document.getElementById('myCounter').innerHTML
                                                  if (myIn01 == 3){
                                                  document.getElementById('myWall').innerHTML = GFG_Fun()
-                                               } else {
-                                               document.getElementById('myWall').innerHTML = myIn01 + ' is not enough'}
+                                               }
                                        }">
 
    
@@ -31,10 +29,13 @@
 <style>
    
   body{
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(253, 250, 165);
+    border: 2px solid blue;
     overflow: hidden;
     background-size: 80%;
-    background-image: url('https://i.stack.imgur.com/WHu9Z.png')
    }
    
    
