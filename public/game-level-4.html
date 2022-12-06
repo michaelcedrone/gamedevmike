@@ -171,7 +171,7 @@ function myObstacle(){
                 }
             }
             function moveLeft() {
-                objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
+                objImage.style.left = parseInt(objImage.style.left) - 8 + "px";
                myCheckHit()
              myObstacle()
              myCoin()
@@ -179,7 +179,7 @@ function myObstacle(){
             }
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
-                objImage.style.top = parseInt(objImage.style.top) - 250 + "px";
+                objImage.style.top = parseInt(objImage.style.top) - 225 + "px";
                 mySound2.play()
                myCheckHit()
               myObstacle()
@@ -188,7 +188,7 @@ function myObstacle(){
             }
      
             function moveRight() {
-                objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
+                objImage.style.left = parseInt(objImage.style.left) + 8 + "px";
                myCheckHit()
              myObstacle()
              myCoin()
