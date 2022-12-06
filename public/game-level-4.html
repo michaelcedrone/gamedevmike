@@ -18,12 +18,11 @@
     <input type=button value="spend 3 coins..." onClick="{
                                                  let myIn01 = document.getElementById('myCounter').innerHTML
                                                  if (myIn01 == 3){
-                                                 document.getElementById('myWall').innerHTML = myIn01 + ' link'
+                                                 document.getElementById('myWall').innerHTML = GFG_Fun()
                                                } else {
                                                document.getElementById('myWall').innerHTML = myIn01 + ' is not enough'}
                                        }">
-   
-    
+
    
 </head>
 
@@ -51,6 +50,15 @@
 
 
 <script>
+ 
+  function GFG_Fun() {
+                var a = document.createElement('a'); 
+                var link = document.createTextNode("https://www.w3schools.com/js/js_functions.asp");
+                a.appendChild(link); 
+                a.title = "https://www.w3schools.com/js/js_functions.asp"; 
+                a.href = "https://www.w3schools.com/js/js_functions.asp"; 
+                document.body.appendChild(a); 
+            }
 
  
   let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
