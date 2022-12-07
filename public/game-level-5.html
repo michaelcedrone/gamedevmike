@@ -7,7 +7,7 @@
 <head>
  
    <h4> coins collected: 
- <div id="myCounter">2</div>
+ <div id="myCounter">0</div>
     
     </h4> 
     <br><br>
@@ -54,10 +54,10 @@
  
   function GFG_Fun() {
                 var a = document.createElement('a'); 
-                var link = document.createTextNode("https://michaelcedrone.github.io/gamedevmike/public/game-level-5.html");
+                var link = document.createTextNode("https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html");
                 a.appendChild(link); 
-                a.title = "https://michaelcedrone.github.io/gamedevmike/public/game-level-5.html"; 
-                a.href = "https://michaelcedrone.github.io/gamedevmike/public/game-level-5.html"; 
+                a.title = "https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html"; 
+                a.href = "https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html"; 
                 document.body.appendChild(a); 
             }
 
@@ -75,6 +75,8 @@ if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
  objImage.style.top = parseInt(objImage.style.top) - 0.5 + "px";
  myObstacle()
  myCoin()
+ myCoin2()
+ myCoin3()
  }
    }
   
@@ -104,7 +106,7 @@ function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
        alert('Mission failed, successfully!?')  
        document.getElementById('myImg01').style.left = '-900px'
-       location = 'game-level-3.html'  // go to your next level
+       location = 'game-level-6.html'  // go to your next level
    }
 }
  
@@ -115,7 +117,7 @@ function myObstacle(){
        mySound3.play()
        alert('You Lose')  
        document.getElementById('myImg01').style.left = '-900px'
-       location = 't2a11-game-template-michael.html'  // go to your next level
+       location = 'game-level-5.html'  // go to your next level
    }
 }
  
@@ -135,6 +137,14 @@ function myObstacle(){
        document.getElementById('myCounter').innerHTML ++
    }
 }
+ 
+ function myCoin3(){
+   if ( myHitOther('myImg01','myImg07') ){
+        mySound4.play() 
+       document.getElementById('myImg07').style.left = '9000px'
+       document.getElementById('myCounter').innerHTML ++
+   }
+}
 
    
    
@@ -143,7 +153,9 @@ function myObstacle(){
 <img id="myImg01" style="position:absolute; width:100px; height:80px; top: 580px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
 <img id="myImg03" style="position:absolute; width:1000px; height:80px; top: 0px; left:0px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
 <img id="myImg04" style="position:absolute; width:1000px; height:80px; top: 0px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">   
-<img id="myImg05" style="position:absolute; width:100px; height:80px; top: 490px; left:1300px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
+<img id="myImg05" style="position:absolute; width:100px; height:80px; top: 490px; left:300px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
+ <img id="myImg06" style="position:absolute; width:100px; height:80px; top: 300px; left:500px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
+  <img id="myImg07" style="position:absolute; width:100px; height:80px; top: 190px; left:50px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png"> 
 
 
     <script type="text/javascript">
@@ -176,6 +188,7 @@ function myObstacle(){
              myObstacle()
              myCoin()
              myCoin2()
+             myCoin3()
             }
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
@@ -184,6 +197,8 @@ function myObstacle(){
                myCheckHit()
               myObstacle()
               myCoin()
+               myCoin2()
+              myCoin3()
               }
             }
      
@@ -192,6 +207,8 @@ function myObstacle(){
                myCheckHit()
              myObstacle()
              myCoin()
+             myCoin2()
+             myCoin3()
             }
             window.onload = init;
             
