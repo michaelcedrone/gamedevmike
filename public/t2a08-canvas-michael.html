@@ -1,4 +1,5 @@
-<h2 align=center>t2a08-canvas by Michael</h2>
+<i><a href="https://github.com/J-0-E/gamedev2022joe">mikes canvas </a><br></i>
+<h2>t2a08-Canvas-by-Michael</h2>
 You use loops and variables to make fast fancy drawings <br><br>
 
 <input type=button value=".lineTo(30,200)" onclick="{
@@ -52,19 +53,9 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.clearRect(20, 20, 50, 50);
 }">
 
-<input type=button value="rectangle" onclick="{
-  let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
-   myContext.fillStyle = myGradient;
-   myContext.fillRect(100, 300, 200, 400);
-   // reset fillstyle
-   myContext.fillStyle = 'black';
-}">
-
 <input type=button value="Clear all" onclick="{
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
-
-
 
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;"></canvas>
 
@@ -72,17 +63,55 @@ You use loops and variables to make fast fancy drawings <br><br>
    // set up global variables
    let myCanvas=document.getElementById('myCoolTag');
    let myContext=myCanvas.getContext('2d');
-   
-   
-function draw() {
-  background(255);
-  fill(0,0,255);
-  rect(300,300,200,200);
-  fill(0,150,75);
-  rect(200,100,50,50);
-  fill(255,90,0);
-  rect(400,200,100,50);
-  fill(255,0,0);
-  rect(350,350,50,200);
-}
 </script>
+
+<style> 
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+  body {
+    
+  
+font-family: 'Orbitron', sans-serif; 
+    font-size: 50px;
+    background-color: black;
+       background-image: url(https://i.pinimg.com/originals/a8/67/35/a867358d064dba73de18899a1d96bbd4.jpg);
+    
+    color: #383838;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  a {
+    color: #636363;
+  }
+  
+  a:hover {
+    color: white;
+  } 
+  
+  
+  h1 {
+
+    text-align: center;
+    padding-top: 60px;
+
+  
+  }
+
+
+  
+  .background-image {
+    filter: blur(2px);
+    -webkit-filter: blur(8px);
+  }
+  
+  
+  
+  </style> 
+
+</body>
