@@ -1,1 +1,208 @@
 
+<h6> Version 0.0.1 </h6>
+
+ <h1 align=center>Level Four!</h1>
+<br><br><br><br>
+
+<head>
+ 
+   <h4> coins collected: 
+ <div id="myCounter">2</div>
+    
+    </h4> 
+    <br><br>
+    
+    <h2> Pay 3 coins to go to the next level! </h2>
+    
+    <input type=button value="spend 3 coins..." onClick="{
+                                                 let myIn01 = document.getElementById('myCounter').innerHTML
+                                                 if (myIn01 == 3){
+                                                 document.getElementById('myWall').innerHTML = GFG_Fun()
+                                               }
+                                       }">
+
+   
+</head>
+
+
+
+<style>
+   
+  body{
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(253, 250, 165);
+    border: 2px solid blue;
+    overflow: hidden;
+    background-size: 80%;
+   }
+   
+   
+</style>
+
+
+
+
+
+
+<body>
+
+
+
+<script>
+ 
+  function GFG_Fun() {
+                var a = document.createElement('a'); 
+                var link = document.createTextNode("https://michaelcedrone.github.io/gamedevmike/public/game-level-5.html");
+                a.appendChild(link); 
+                a.title = "https://michaelcedrone.github.io/gamedevmike/public/game-level-5.html"; 
+                a.href = "https://michaelcedrone.github.io/gamedevmike/public/game-level-5.html"; 
+                document.body.appendChild(a); 
+            }
+
+ 
+  let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
+ let mySound3 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Death%20-%20QuickSounds.com.mp3')
+ let mySound4 = new Audio(' https://michaelcedrone.github.io/gamedevmike/public/mixkit-fairy-arcade-sparkle-866.wav')
+
+   // global variables here
+   let myGlobalX = 0
+   let myClock
+
+function mygravity() {
+if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
+ objImage.style.top = parseInt(objImage.style.top) - 0.5 + "px";
+ myObstacle()
+ myCoin()
+ }
+   }
+  
+
+   setInterval(mygravity,10)
+   
+   // global functions here
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+
+function myCheckHit(){
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('Mission failed, successfully!?')  
+       document.getElementById('myImg01').style.left = '-900px'
+       location = 'game-level-3.html'  // go to your next level
+   }
+}
+ 
+ 
+  
+function myObstacle(){
+   if ( myHitOther('myImg01','myImg03') ){
+       mySound3.play()
+       alert('You Lose')  
+       document.getElementById('myImg01').style.left = '-900px'
+       location = 't2a11-game-template-michael.html'  // go to your next level
+   }
+}
+ 
+ 
+  function myCoin(){
+   if ( myHitOther('myImg01','myImg05') ){
+        mySound4.play() 
+       document.getElementById('myImg05').style.left = '9000px'
+       document.getElementById('myCounter').innerHTML ++
+   }
+}
+ 
+ function myCoin2(){
+   if ( myHitOther('myImg01','myImg06') ){
+        mySound4.play() 
+       document.getElementById('myImg06').style.left = '9000px'
+       document.getElementById('myCounter').innerHTML ++
+   }
+}
+
+   
+   
+</script>
+
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 580px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
+<img id="myImg03" style="position:absolute; width:9000px; height:100px; top: 0px; left:0px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+<img id="myImg04" style="position:absolute; width:500px; height:80px; top: 590px; left:1000px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">   
+<img id="myImg05" style="position:absolute; width:100px; height:80px; top: 490px; left:1300px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
+
+
+    <script type="text/javascript">
+            //init object globally
+            var objImage = null;
+            function init() {
+                objImage = document.getElementById("myImg01");
+                objImage.style.position = "absolute";  
+            }
+            function getKeyAndMove(e) {
+                var key_code = e.which || e.keyCode;
+                switch (key_code) {
+                    case 37: //left arrow key
+                        moveLeft();
+                        break;
+                    case 38: //Up arrow key
+                        moveUp();
+                        break;
+                    case 39: //right arrow key
+                        moveRight();
+                        break;
+                    case 40: //down arrow key
+                        moveDown();
+                        break;
+                }
+            }
+            function moveLeft() {
+                objImage.style.left = parseInt(objImage.style.left) - 10 + "px";
+               myCheckHit()
+             myObstacle()
+             myCoin()
+             myCoin2()
+            }
+            function moveUp() {
+             if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
+                objImage.style.top = parseInt(objImage.style.top) - 250 + "px";
+                mySound2.play()
+               myCheckHit()
+              myObstacle()
+              myCoin()
+              }
+            }
+     
+            function moveRight() {
+                objImage.style.left = parseInt(objImage.style.left) + 10 + "px";
+               myCheckHit()
+             myObstacle()
+             myCoin()
+            }
+            window.onload = init;
+            
+        </script>
+        
+
+
+    <body onkeydown="getKeyAndMove(event)">
+
+        </body>
+   
+   
+   </html>
+
