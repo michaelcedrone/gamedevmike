@@ -170,7 +170,7 @@ function myObstacle(){
              myCoin3()
             }
             function moveUp() {
-               if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
+               if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
                objImage.style.top = parseInt(objImage.style.top) - 0.5 + "px";
                 myObstacle()
                  myCoin()
@@ -189,7 +189,7 @@ function myObstacle(){
              myCoin3()
             }
      function moveDown() {
-                 if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
+                 if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
                objImage.style.top = parseInt(objImage.style.top) + 0.5 + "px";
                 myObstacle()
                  myCoin()
