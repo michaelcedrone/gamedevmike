@@ -1,26 +1,56 @@
 <h6> Version 0.0.1 </h6>
 
+ <h1 align=center>Level one! Slow and steady...</h1>
+<br><br><br><br>
+
+<head>
+   <h4> use arrow keys to allow mario to jump infront of the car </h4>
+   
+   
+</head>
+
+
 
 <style>
-   .myImg02{
-      opacity: 0.5
+   
+   body{
+    background-repeat: repeat;
+    overflow: hidden;
+    background-size: 80%;
+    background-image: url('https://i.stack.imgur.com/WHu9Z.png')
    }
    
    
 </style>
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://i.stack.imgur.com/WHu9Z.png">
 
-<h1 align=center>t2a11 Game Template by Michael</h1>
-<br><br><br><br>
+
+
+
+
+
+<body>
+
 
 <script>
 
+ let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
+ let mySound3 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Death%20-%20QuickSounds.com.mp3')
    // global variables here
    let myGlobalX = 0
    let myClock
 
+function mygravity() {
+if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
+ objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+ myObstacle()
+ myObstacle2()
+ }
+   }
+  
 
+   setInterval(mygravity,100)
+   
    // global functions here
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
@@ -43,41 +73,95 @@ function myHitOther(my1,my2){
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
        alert('Mission failed, successfully!?')  
-       document.getElementById('myImg01').style.left = '20px'
+       document.getElementById('myImg01').style.left = '900px'
        location = 'game-level-2.html'  // go to your next level
    }
-
-
-   // more if statements here like the above
-
-
-
-}  // end of myCheckHit()
-
+}
+ 
+ 
+  
+function myObstacle(){
+   if ( myHitOther('myImg01','myImg03') ){
+       mySound3.play()
+       alert('You Lose')  
+       document.getElementById('myImg01').style.left = '5px'
+       location = 't2a11-game-template-michael.html'  // go to your next level
+   }
+}
 
    
+ 
+ function myObstacle2(){
+   if ( myHitOther('myImg01','myImg04') ){
+        mySound3.play()
+       alert('Wait what...')  
+       document.getElementById('myImg01').style.left = '-900px'
+       location = 'secret.html'  // go to your next level
+   }
+}
    
 </script>
 
-<img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
-<img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:250px;" src="https://freepngimg.com/thumb/toyota/17-toyota-png-image-car-image.png">
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 300px; left:200px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
+<img id="myImg02" style="position:absolute; width:100px; height:80px; top: 590px; left:500px;" src="https://freepngimg.com/thumb/toyota/17-toyota-png-image-car-image.png">
+<img id="myImg04" style="position:absolute; width:100px; height:80px; top: 590px; left:2000px;"  src="https://i2.wp.com/sreditingzone.com/wp-content/uploads/2018/07/png-light-6.png?resize=651%2C600&ssl=1">   
+
+   
+    <script type="text/javascript">
+            //init object globally
+            var objImage = null;
+            function init() {
+                objImage = document.getElementById("myImg01");
+                objImage.style.position = "absolute";  
+            }
+            function getKeyAndMove(e) {
+                var key_code = e.which || e.keyCode;
+                switch (key_code) {
+                    case 37: //left arrow key
+                        moveLeft();
+                        break;
+                    case 38: //Up arrow key
+                        moveUp();
+                        break;
+                    case 39: //right arrow key
+                        moveRight();
+                        break;
+                    case 40: //down arrow key
+                        moveDown();
+                        break;
+                }
+            }
+            function moveLeft() {
+                objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
+               myCheckHit()
+             myObstacle()
+             myObstacle2()
+            }
+            function moveUp() {
+             if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
+                objImage.style.top = parseInt(objImage.style.top) - 200 + "px";
+                 mySound2.play()
+               myCheckHit()
+              myObstacle()
+              myObstacle2()
+              }
+            }
+     
+            function moveRight() {
+                objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
+               myCheckHit()
+             myObstacle()
+             myObstacle2()
+            }
+            window.onload = init;
+            
+        </script>
+        
 
 
-<input type=button value="Auto Background Left" onclick="{
-  clearInterval(myClock)
-  let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myGlobalX -= 5
-      myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
-    
-}">
+    <body onkeydown="getKeyAndMove(event)">
 
-
-<input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
-}"><br><br>
-
-
+        </body>
+   
+   
+   </html>
