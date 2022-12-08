@@ -101,14 +101,7 @@ function myHitOther(my1,my2){
 }
 
 
-function myCheckHit(){
-   if ( myHitOther('myImg01','myImg02') ){
-       alert('Mission failed, successfully!?')  
-       document.getElementById('myImg01').style.left = '-900px'
-       location = 'secret.html'  // go to your next level
-   }
-}
- 
+
  
   
 function myObstacle(){
@@ -150,13 +143,14 @@ function myObstacle(){
 </script>
 
 <img id="myImg01" style="position:absolute; width:100px; height:80px; top: 580px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
-<img id="myImg03" style="position:absolute; width:1000px; height:80px; top: 0px; left:0px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-<img id="myImg04" style="position:absolute; width:1000px; height:80px; top: 0px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">   
+<img id="myImg02" style="position:absolute; width:2000px; height:80px; top: 0px; left:0px; transform: rotate(180deg);" src="https://cdn-media.threadless.com/submissions_wm/745054-dc6bd0c9443f431efd2e01c0e4af7a83.jpg"> 
+<img id="myImg03" style="position:absolute; width:100px; height:80px; top: 0px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+<img id="myImg04" style="position:absolute; width:100px; height:80px; top: 0px; left:500px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">   
 <img id="myImg05" style="position:absolute; width:100px; height:80px; top: 490px; left:300px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
  <img id="myImg06" style="position:absolute; width:100px; height:80px; top: 300px; left:500px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
   <img id="myImg07" style="position:absolute; width:100px; height:80px; top: 190px; left:50px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png"> 
-
-
+<img id="myImg08" style="position:absolute; width:2000px; height:80px; top: 590px; left:0px;" src="https://cdn-media.threadless.com/submissions_wm/745054-dc6bd0c9443f431efd2e01c0e4af7a83.jpg">
+https://cdn-media.threadless.com/submissions_wm/745054-dc6bd0c9443f431efd2e01c0e4af7a83.jpg
     <script type="text/javascript">
             //init object globally
             var objImage = null;
@@ -190,16 +184,15 @@ function myObstacle(){
              myCoin3()
             }
             function moveUp() {
-             if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
-                objImage.style.top = parseInt(objImage.style.top) - 250 + "px";
-                mySound2.play()
-               myCheckHit()
-              myObstacle()
-              myCoin()
-               myCoin2()
-              myCoin3()
-              }
-            }
+               if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
+               objImage.style.top = parseInt(objImage.style.top) - 0.5 + "px";
+                myObstacle()
+                 myCoin()
+                 myCoin2()
+                 myCoin3()
+                setInterval(moveUp,10)
+ }
+   }
      
             function moveRight() {
                 objImage.style.left = parseInt(objImage.style.left) + 10 + "px";
