@@ -128,7 +128,7 @@ function myObstacle(){
    
 </script>
 
-<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 580px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 590px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
 <img id="myImg02" style="position:absolute; width:2000px; height:80px; top: 0px; left:0px; transform: rotate(180deg);" src="https://cdn-media.threadless.com/submissions_wm/745054-dc6bd0c9443f431efd2e01c0e4af7a83.jpg"> 
 <img id="myImg03" style="position:absolute; width:100px; height:80px; top: 80px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
 <img id="myImg04" style="position:absolute; width:100px; height:80px; top: 590px; left:500px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">   
@@ -187,6 +187,15 @@ function myObstacle(){
              myCoin()
              myCoin2()
              myCoin3()
+            }
+     function moveDown() {
+                 if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
+               objImage.style.top = parseInt(objImage.style.top) + 0.5 + "px";
+                myObstacle()
+                 myCoin()
+                 myCoin2()
+                 myCoin3()
+                setInterval(moveUp,100)
             }
             window.onload = init;
             
