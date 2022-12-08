@@ -27,14 +27,12 @@
 
 <style>
    
-  body{
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://i0.wp.com/definircomo.wordpress.com/files/2009/03/mariowall.png');
-    border: 2px solid blue;
+
+body{
+    background-repeat: repeat;
     overflow: hidden;
     background-size: 80%;
+    background-image: url('https://i.stack.imgur.com/WHu9Z.png')
    }
    
    
@@ -69,18 +67,6 @@
    let myGlobalX = 0
    let myClock
 
-function mygravity() {
-if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
- objImage.style.top = parseInt(objImage.style.top) - 0.5 + "px";
- myObstacle()
- myCoin()
- myCoin2()
- myCoin3()
- }
-   }
-  
-
-   setInterval(mygravity,10)
    
    // global functions here
 function myHitOther(my1,my2){
@@ -144,13 +130,13 @@ function myObstacle(){
 
 <img id="myImg01" style="position:absolute; width:100px; height:80px; top: 580px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
 <img id="myImg02" style="position:absolute; width:2000px; height:80px; top: 0px; left:0px; transform: rotate(180deg);" src="https://cdn-media.threadless.com/submissions_wm/745054-dc6bd0c9443f431efd2e01c0e4af7a83.jpg"> 
-<img id="myImg03" style="position:absolute; width:100px; height:80px; top: 0px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-<img id="myImg04" style="position:absolute; width:100px; height:80px; top: 0px; left:500px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">   
+<img id="myImg03" style="position:absolute; width:100px; height:80px; top: 80px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+<img id="myImg04" style="position:absolute; width:100px; height:80px; top: 590px; left:500px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">   
 <img id="myImg05" style="position:absolute; width:100px; height:80px; top: 490px; left:300px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
  <img id="myImg06" style="position:absolute; width:100px; height:80px; top: 300px; left:500px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
   <img id="myImg07" style="position:absolute; width:100px; height:80px; top: 190px; left:50px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png"> 
-<img id="myImg08" style="position:absolute; width:2000px; height:80px; top: 590px; left:0px;" src="https://cdn-media.threadless.com/submissions_wm/745054-dc6bd0c9443f431efd2e01c0e4af7a83.jpg">
-https://cdn-media.threadless.com/submissions_wm/745054-dc6bd0c9443f431efd2e01c0e4af7a83.jpg
+
+
     <script type="text/javascript">
             //init object globally
             var objImage = null;
