@@ -131,9 +131,12 @@ function myObstacle(){
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
-                myObstacle()
-                myObstacle2()
-              setInterval(moveUp,100)
+                myObstacle();
+                myObstacle2();
+              
+             var setInterval_ID = setInterval(moveUp,100);
+              setTimeout(stop_interval, 1000);
+ 
               }
             }
      
@@ -151,7 +154,9 @@ function myObstacle(){
        setInterval(moveDown,100)
  }
             }
-      
+       function stop_interval(){
+    clearInterval(setInterval_ID);
+  }
             window.onload = init;
             
         </script>
