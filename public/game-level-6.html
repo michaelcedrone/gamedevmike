@@ -129,7 +129,7 @@ function myObstacle(){
              myObstacle2()
             }
             function moveUp() {
-             if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
+             if( parseInt(document.getElementById('myImg01').style.top)    > 590){
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
                 myObstacle()
                 myObstacle2()
@@ -144,7 +144,7 @@ function myObstacle(){
              myObstacle2()
             }
             function moveDown() {
-      if( parseInt(document.getElementById('myImg01').style.top)    <= 0){
+      if( parseInt(document.getElementById('myImg01').style.top)    < 0){
         objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
          myObstacle()
          myObstacle2()
