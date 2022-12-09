@@ -130,19 +130,21 @@ function myObstacle(){
             }
      
      
-      var gravityUp = setInterval(moveUp,10);
-     setTimeout(stop_interval, 2000);
+
+    
       
      function stop_interval(){
     clearInterval(gravityUp);
   }
      
             function moveUp() {
+             var gravityUp = setInterval(moveUp,10);
              if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
                 myObstacle();
                 myObstacle2();
-                
+                gravityUp;
+               setTimeout(stop_interval, 2000);
               }
             }
      
