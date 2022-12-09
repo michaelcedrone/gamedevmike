@@ -131,7 +131,7 @@ function myObstacle(){
      
      
       var gravityUp = setInterval(moveUp,10);
-     setTimeout(stop_interval, 1000);
+     setTimeout(stop_interval, 2000);
       
      function stop_interval(){
     clearInterval(gravityUp);
@@ -142,6 +142,7 @@ function myObstacle(){
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
                 myObstacle();
                 myObstacle2();
+                
               }
             }
      
