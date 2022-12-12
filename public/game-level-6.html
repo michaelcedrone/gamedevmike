@@ -133,18 +133,15 @@ function myObstacle(){
 
     
       
-     function stop_interval(){
-    clearInterval(moveUp);
-      clearInterval(moveDown);
-  }
+    
      
             function moveUp() {
-             var gravityUp = setInterval(moveUp,10);
              if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
                 myObstacle();
                 myObstacle2();
-               setTimeout(stop_interval, 2000);
+              setInterval(moveUp,100);
+               clearInterval(moveDown);
               }
             }
      
@@ -155,12 +152,12 @@ function myObstacle(){
              myObstacle2()
             }
             function moveDown() {
-            var gravityDown = setInterval(moveDown,10)
       if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
         objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
          myObstacle();
          myObstacle2();
-       setTimeout(stop_interval, 2000);
+        setInterval(moveDown,100);
+       clearInterval(moveUp);
  }
             }
       
