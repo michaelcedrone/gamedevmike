@@ -114,6 +114,7 @@ function myObstacle(){
                     case 38: //Up arrow key
                   clearInterval(moveDown);
                         moveUp();
+                   setInterval(moveUp,100);
                         break;
                     case 39: //right arrow key
                         moveRight();
@@ -121,6 +122,7 @@ function myObstacle(){
                     case 40: //down arrow key
                   clearInterval(moveUp);
                         moveDown();
+                  setInterval(moveDown,100);
                         break;
                 }
             }
@@ -142,7 +144,6 @@ function myObstacle(){
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
                 myObstacle();
                 myObstacle2();
-              setInterval(moveUp,100);
               }
             }
      
@@ -157,8 +158,6 @@ function myObstacle(){
         objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
          myObstacle();
          myObstacle2();
-        setInterval(moveDown,100);
-       
  }
             }
       
