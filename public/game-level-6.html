@@ -135,6 +135,7 @@ function myObstacle(){
       
      function stop_interval(){
     clearInterval(moveUp);
+      clearInterval(moveDown);
   }
      
             function moveUp() {
@@ -154,11 +155,12 @@ function myObstacle(){
              myObstacle2()
             }
             function moveDown() {
-      if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
+            var gravityDown = setInterval(moveDown,10)
+      if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
         objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
-         myObstacle()
-         myObstacle2()
-       setInterval(moveDown,100)
+         myObstacle();
+         myObstacle2();
+       setTimeout(stop_interval, 2000);
  }
             }
       
