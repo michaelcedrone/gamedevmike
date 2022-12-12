@@ -63,8 +63,8 @@ function myHitOther(my1,my2){
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
        alert('Mission failed, successfully!?')  
-       document.getElementById('myImg01').style.left = '900px'
-       location = 'game-level-3.html'  // go to your next level
+       document.getElementById('myImg01').style.left = '0px'
+       location = 'secret.html'  // go to your next level
    }
 }
  
@@ -87,6 +87,24 @@ function myObstacle(){
        alert('Wait what...')  
        document.getElementById('myImg01').style.left = '-900px'
        location = 'secret.html'  // go to your next level
+   }
+}
+ 
+function myObstacle3(){
+   if ( myHitOther('myImg01','myImg05') ){
+       mySound3.play()
+       alert('You Lose')  
+       document.getElementById('myImg01').style.left = '5px'
+       location = 't2a11-game-template-michael.html'  // go to your next level
+   }
+}
+ 
+ function myObstacle4(){
+   if ( myHitOther('myImg01','myImg06') ){
+       mySound3.play()
+       alert('You Lose')  
+       document.getElementById('myImg01').style.left = '5px'
+       location = 't2a11-game-template-michael.html'  // go to your next level
    }
 }
    
