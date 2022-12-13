@@ -113,8 +113,8 @@ function myObstacle3(){
 <img id="myImg02" style="position:absolute; width:100px; height:80px; top: 590px; left:1000px;" src="https://freepngimg.com/thumb/toyota/17-toyota-png-image-car-image.png">
 <img id="myImg03" style="position:absolute; width:500px; height:300px; top: 400px; left:400px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
 <img id="myImg04" style="position:absolute; width:100px; height:80px; top: 590px; left:2000px;"  src="https://i2.wp.com/sreditingzone.com/wp-content/uploads/2018/07/png-light-6.png?resize=651%2C600&ssl=1">   
-<img id="myImg05" style="position:absolute; width:200px; height:300px; top: 400px; left:1200px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-<img id="myImg06" style="position:absolute; width:300px; height:80px; top: 0px; left:900px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
+<img id="myImg05" style="position:absolute; width:500px; height:300px; top: 400px; left:1200px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+<img id="myImg06" style="position:absolute; width:500px; height:100px; top: 0px; left:800px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
  
  
     <script type="text/javascript">
@@ -147,9 +147,11 @@ function myObstacle3(){
             }
             function moveLeft() {
                 objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
-               myCheckHit()
-             myObstacle()
-             myObstacle2()
+               myCheckHit();
+             myObstacle();
+             myObstacle2();
+             myObstacle3();
+             myObstacle4()
             }
      
      
@@ -161,22 +163,30 @@ function myObstacle3(){
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
+              myCheckHit();
                 myObstacle();
                 myObstacle2();
+              myObstacle3();
+             myObstacle4();
               }
             }
      
             function moveRight() {
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
-               myCheckHit()
-             myObstacle()
-             myObstacle2()
+               myCheckHit();
+             myObstacle();
+             myObstacle2();
+             myObstacle3();
+             myObstacle4();
             }
             function moveDown() {
       if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
         objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+       myCheckHit();
          myObstacle();
          myObstacle2();
+          myObstacle3();
+             myObstacle4();
  }
             }
       
