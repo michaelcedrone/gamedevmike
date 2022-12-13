@@ -132,7 +132,7 @@ function myObstacle(){
                 }
             }
             function moveLeft() {
-             if( parseInt(document.getElementById('myImg01').style.left)    <= 2000){
+             if( parseInt(document.getElementById('myImg01').style.left)    >= 2000){
                 objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
                myCheckHit()
              myObstacle()
@@ -149,7 +149,7 @@ function myObstacle(){
             }
      
             function moveRight() {
-             if( parseInt(document.getElementById('myImg01').style.left)    >= 0){
+             if( parseInt(document.getElementById('myImg01').style.left)    <= 0){
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
                myCheckHit()
              myObstacle()
