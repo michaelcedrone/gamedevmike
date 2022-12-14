@@ -128,7 +128,9 @@ function myObstacle3(){
                 var key_code = e.which || e.keyCode;
                 switch (key_code) {
                     case 37: //left arrow key
+                  clearInterval(moveRight);
                         moveLeft();
+                  setInterval(moveLeft,100);
                         break;
                     case 38: //Up arrow key
                   clearInterval(moveDown);
@@ -136,7 +138,9 @@ function myObstacle3(){
                    setInterval(moveUp,100);
                         break;
                     case 39: //right arrow key
+                  clearInterval(moveLeft);
                         moveRight();
+                  setInterval(moveRight,100);
                         break;
                     case 40: //down arrow key
                   clearInterval(moveUp);
