@@ -1,11 +1,25 @@
 <h6> Version 0.0.1 </h6>
 
- <h1>Level seven! Even more gravity control!</h1>
+ <h1 align=center>Level seven! Zero gravity...AGAIN! (sry, i couldn't help myself)</h1>
 <br><br><br><br>
 
 <head>
-   <h4> "warning", holding arrow keys makes the gravitational pull too strong! </h4>
-   
+ 
+   <h4> coins collected: 
+ <div id="myCounter">0</div>
+    
+    </h4> 
+    <br><br>
+    
+    <h2> Pay 3 coins to go to the next level! </h2>
+    
+    <input type=button style="float: right; margin-right: 100px;" value="spend 3 coins..." onClick="{
+                                                 let myIn01 = document.getElementById('myCounter').innerHTML
+                                                 if (myIn01 == 3){
+                                                 document.getElementById('myWall').innerHTML = GFG_Fun()
+                                               }
+                                       }">
+
    
 </head>
 
@@ -13,11 +27,14 @@
 
 <style>
    
-   body{
-    background-repeat: repeat;
+  body{
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i0.wp.com/definircomo.wordpress.com/files/2009/03/mariowall.png');
+    border: 2px solid blue;
     overflow: hidden;
     background-size: 80%;
-    background-image: url('https://i0.wp.com/definircomo.wordpress.com/files/2009/03/mariowall.png')
    }
    
    
@@ -28,17 +45,42 @@
 
 
 
-
 <body>
 
 
-<script>
 
- let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
+<script>
+ 
+  function GFG_Fun() {
+                var a = document.createElement('a'); 
+                var link = document.createTextNode("Click to win!");
+                a.appendChild(link); 
+                a.title = "https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html"; 
+                a.href = "https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html"; 
+                document.body.appendChild(a); 
+            }
+
+ 
+  let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
  let mySound3 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Death%20-%20QuickSounds.com.mp3')
+ let mySound4 = new Audio(' https://michaelcedrone.github.io/gamedevmike/public/mixkit-fairy-arcade-sparkle-866.wav')
+
    // global variables here
    let myGlobalX = 0
    let myClock
+
+function mygravity() {
+if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
+ objImage.style.top = parseInt(objImage.style.top) - 0.5 + "px";
+ myObstacle()
+ myCoin()
+ myCoin2()
+ myCoin3()
+ }
+   }
+  
+
+   setInterval(mygravity,10)
    
    // global functions here
 function myHitOther(my1,my2){
@@ -62,8 +104,8 @@ function myHitOther(my1,my2){
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
        alert('Mission failed, successfully!?')  
-       document.getElementById('myImg01').style.left = '0px'
-       location = 'secret.html'  // go to your next level
+       document.getElementById('myImg01').style.left = '-900px'
+       location = 'game-level-6.html'  // go to your next level
    }
 }
  
@@ -73,51 +115,69 @@ function myObstacle(){
    if ( myHitOther('myImg01','myImg03') ){
        mySound3.play()
        alert('You Lose')  
-       document.getElementById('myImg01').style.left = '5px'
-       location = 't2a11-game-template-michael.html'  // go to your next level
+       document.getElementById('myImg01').style.left = '-9000px'
+       location = 'game-level-5.html'  // go to your next level
+   }
+}
+ 
+ function myObstacle2(){
+   if ( myHitOther('myImg01','myImg08') ){
+       mySound3.play()
+       alert('You Lose')  
+       document.getElementById('myImg01').style.left = '-9000px'
+       location = 'game-level-5.html'  // go to your next level
+   }
+}
+ 
+ function myObstacle(){
+   if ( myHitOther('myImg01','myImg09') ){
+       mySound3.play()
+       alert('You Lose')  
+       document.getElementById('myImg01').style.left = '-9000px'
+       location = 'game-level-5.html'  // go to your next level
+   }
+}
+ 
+ 
+  function myCoin(){
+   if ( myHitOther('myImg01','myImg05') ){
+        mySound4.play() 
+       document.getElementById('myImg05').style.left = '9000px'
+       document.getElementById('myCounter').innerHTML ++
+   }
+}
+ 
+ function myCoin2(){
+   if ( myHitOther('myImg01','myImg06') ){
+        mySound4.play() 
+       document.getElementById('myImg06').style.left = '9000px'
+       document.getElementById('myCounter').innerHTML ++
+   }
+}
+ 
+ function myCoin3(){
+   if ( myHitOther('myImg01','myImg07') ){
+        mySound4.play() 
+       document.getElementById('myImg07').style.left = '9000px'
+       document.getElementById('myCounter').innerHTML ++
    }
 }
 
    
- 
- function myObstacle2(){
-   if ( myHitOther('myImg01','myImg04') ){
-        mySound3.play()
-       alert('Wait what...')  
-       document.getElementById('myImg01').style.left = '-900px'
-       location = 'secret.html'  // go to your next level
-   }
-}
- 
-function myObstacle3(){
-   if ( myHitOther('myImg01','myImg05') ){
-       mySound3.play()
-       alert('You Lose')  
-       document.getElementById('myImg01').style.left = '5px'
-       location = 't2a11-game-template-michael.html'  // go to your next level
-   }
-}
- 
- function myObstacle4(){
-   if ( myHitOther('myImg01','myImg06') ){
-       mySound3.play()
-       alert('You Lose')  
-       document.getElementById('myImg01').style.left = '9000px'
-       location = 't2a11-game-template-michael.html'  // go to your next level
-   }
-}
    
 </script>
 
-<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 590px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
-<img id="myImg02" style="position:absolute; width:100px; height:80px; top: 0px; left:10px;" src="https://freepngimg.com/thumb/toyota/17-toyota-png-image-car-image.png">
-<img id="myImg03" style="position:absolute; width:400px; height:80px; top: 120px; left:400px; transform: rotate(270deg)" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-<img id="myImg04" style="position:absolute; width:100px; height:80px; top: 590px; left:2000px;"  src="https://i2.wp.com/sreditingzone.com/wp-content/uploads/2018/07/png-light-6.png?resize=651%2C600&ssl=1">   
-<img id="myImg05" style="position:absolute; width:800px; height:80px; top: 490px; left:1050px; transform: rotate(270deg)" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-<img id="myImg06" style="position:absolute; width:1000px; height:80px; top: 400px; left:0px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
- 
- 
-    <script type="text/javascript">
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 580px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
+<img id="myImg03" style="position:absolute; width:1000px; height:80px; top: 0px; left:0px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+<img id="myImg04" style="position:absolute; width:1000px; height:80px; top: 0px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+<img id="myImg05" style="position:absolute; width:100px; height:80px; top: 490px; left:300px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
+ <img id="myImg06" style="position:absolute; width:100px; height:80px; top: 300px; left:500px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
+  <img id="myImg07" style="position:absolute; width:100px; height:80px; top: 190px; left:50px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png"> 
+
+ <img id="myImg08" style="position:absolute; width:1000px; height:80px; top: 490px; left:0px; transform: rotate(360deg)" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+<img id="myImg09" style="position:absolute; width:1000px; height:80px; top: 490px; left:1100px; transform: rotate(270deg)" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+
+   <script type="text/javascript">
             //init object globally
             var objImage = null;
             function init() {
@@ -132,20 +192,10 @@ function myObstacle3(){
                         moveLeft();
                      setInterval(moveLeft,100);
                         break;
-                    case 38: //Up arrow key
-                  clearInterval(moveDown);
-                        moveUp();
-                   setInterval(moveUp,100);
-                        break;
                     case 39: //right arrow key
                     clearInterval(moveLeft);
                         moveRight();
                     setInterval(moveRight,100);
-                        break;
-                    case 40: //down arrow key
-                  clearInterval(moveUp);
-                        moveDown();
-                  setInterval(moveDown,100);
                         break;
                 }
             }
@@ -158,23 +208,7 @@ function myObstacle3(){
              myObstacle4()
             }
      
-     
 
-    
-      
-    
-     
-            function moveUp() {
-             if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
-                objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
-              myCheckHit();
-                myObstacle();
-                myObstacle2();
-              myObstacle3();
-             myObstacle4();
-              }
-            }
-     
             function moveRight() {
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
                myCheckHit();
@@ -183,16 +217,7 @@ function myObstacle3(){
              myObstacle3();
              myObstacle4();
             }
-            function moveDown() {
-      if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
-        objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
-       myCheckHit();
-         myObstacle();
-         myObstacle2();
-          myObstacle3();
-             myObstacle4();
- }
-            }
+           
       
             window.onload = init;
             
@@ -206,3 +231,5 @@ function myObstacle3(){
    
    
    </html>
+
+
