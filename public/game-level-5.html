@@ -14,7 +14,7 @@
     
     <h2> Pay 3 coins to go to the next level! </h2>
     
-    <input type=button style="float: right; margin-right: 100px;" value="spend 3 coins..." onClick="{
+    <input type=button value="spend 3 coins..." onClick="{
                                                  let myIn01 = document.getElementById('myCounter').innerHTML
                                                  if (myIn01 == 3){
                                                  document.getElementById('myWall').innerHTML = GFG_Fun()
@@ -54,7 +54,7 @@
  
   function GFG_Fun() {
                 var a = document.createElement('a'); 
-                var link = document.createTextNode("Click to go to level 6!");
+                var link = document.createTextNode("Click to go to level 6. Hurry!");
                 a.appendChild(link); 
                 a.title = "https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html"; 
                 a.href = "https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html"; 
