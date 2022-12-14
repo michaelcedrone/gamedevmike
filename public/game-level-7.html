@@ -32,7 +32,6 @@
     margin: 0;
     padding: 0;
     background-image: url('https://i0.wp.com/definircomo.wordpress.com/files/2009/03/mariowall.png');
-    border: 2px solid blue;
     overflow: hidden;
     background-size: 80%;
    }
@@ -73,6 +72,9 @@ function mygravity() {
 if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
  objImage.style.top = parseInt(objImage.style.top) - 0.5 + "px";
  myObstacle()
+ myObstacle2()
+ myObstacle3()
+ myObstacle4()
  myCoin()
  myCoin2()
  myCoin3()
@@ -121,6 +123,15 @@ function myObstacle(){
 }
  
  function myObstacle2(){
+   if ( myHitOther('myImg01','myImg04') ){
+       mySound3.play()
+       alert('You Lose')  
+       document.getElementById('myImg01').style.left = '-9000px'
+       location = 'game-level-5.html'  // go to your next level
+   }
+}
+ 
+ function myObstacle3(){
    if ( myHitOther('myImg01','myImg08') ){
        mySound3.play()
        alert('You Lose')  
@@ -129,7 +140,7 @@ function myObstacle(){
    }
 }
  
- function myObstacle(){
+ function myObstacle4(){
    if ( myHitOther('myImg01','myImg09') ){
        mySound3.play()
        alert('You Lose')  
@@ -205,7 +216,10 @@ function myObstacle(){
              myObstacle();
              myObstacle2();
              myObstacle3();
-             myObstacle4()
+             myObstacle4();
+             myCoin();
+             myCoin2();
+             myCoin3();
             }
      
 
@@ -216,6 +230,9 @@ function myObstacle(){
              myObstacle2();
              myObstacle3();
              myObstacle4();
+              myCoin();
+             myCoin2();
+             myCoin3();
             }
            
       
