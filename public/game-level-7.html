@@ -86,15 +86,6 @@ function myHitOther(my1,my2){
        return true
    }
 }
-
-
-function myCheckHit(){
-   if ( myHitOther('myImg01','myImg02') ){
-       alert('Mission failed, successfully!?')  
-       document.getElementById('myImg01').style.left = '-900px'
-       location = 'game-level-6.html'  // go to your next level
-   }
-}
  
  
   
@@ -214,12 +205,6 @@ function myObstacle(){
              myObstacle4()
             }
      
-     
-
-    
-      
-    
-     
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
@@ -258,7 +243,7 @@ function myObstacle(){
     <body onkeydown="getKeyAndMove(event)">
 
         </body>
-   
+   </body>
    
    </html>
 
