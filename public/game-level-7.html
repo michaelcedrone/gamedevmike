@@ -203,21 +203,12 @@ function myObstacle(){
                         moveLeft();
                   setInterval(moveLeft,100);
                         break;
-                    case 38: //Up arrow key
-                  clearInterval(moveDown);
-                        moveUp();
-                   setInterval(moveUp,100);
-                        break;
                     case 39: //right arrow key
                   clearInterval(moveLeft);
                         moveRight();
                   setInterval(moveRight,100);
                         break;
-                    case 40: //down arrow key
-                  clearInterval(moveUp);
-                        moveDown();
-                  setInterval(moveDown,100);
-                        break;
+                  
                 }
             }
             function moveLeft() {
