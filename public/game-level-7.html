@@ -199,12 +199,12 @@ function myObstacle(){
                 var key_code = e.which || e.keyCode;
                 switch (key_code) {
                     case 37: //left arrow key
-                  clearInterval(moveRight);
+                  clearInterval(mygravity);
                         moveLeft();
                   setInterval(moveLeft,100);
                         break;
                     case 39: //right arrow key
-                  clearInterval(moveLeft);
+                  clearInterval(mygravity);
                         moveRight();
                   setInterval(moveRight,100);
                         break;
