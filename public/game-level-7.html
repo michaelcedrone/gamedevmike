@@ -173,7 +173,7 @@ function myObstacle(){
  <img id="myImg08" style="position:absolute; width:200px; height:1000px; top: 200px; left:0px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
 <img id="myImg09" style="position:absolute; width:200px; height:1000px; top: 200px; left:1100px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
 
-   <script type="text/javascript">
+  <script type="text/javascript">
             //init object globally
             var objImage = null;
             function init() {
@@ -184,16 +184,25 @@ function myObstacle(){
                 var key_code = e.which || e.keyCode;
                 switch (key_code) {
                     case 37: //left arrow key
-                  clearInterval(mygravity);
+                  clearInterval(moveRight);
                         moveLeft();
                   setInterval(moveLeft,100);
                         break;
+                    case 38: //Up arrow key
+                  clearInterval(moveDown);
+                        moveUp();
+                   setInterval(moveUp,100);
+                        break;
                     case 39: //right arrow key
-                  clearInterval(mygravity);
+                  clearInterval(moveLeft);
                         moveRight();
                   setInterval(moveRight,100);
                         break;
-                  
+                    case 40: //down arrow key
+                  clearInterval(moveUp);
+                        moveDown();
+                  setInterval(moveDown,100);
+                        break;
                 }
             }
             function moveLeft() {
@@ -202,10 +211,7 @@ function myObstacle(){
              myObstacle();
              myObstacle2();
              myObstacle3();
-             myObstacle4();
-             myCoin();
-             myCoin2();
-             myCoin3();
+             myObstacle4()
             }
      
      
@@ -214,7 +220,16 @@ function myObstacle(){
       
     
      
-          
+            function moveUp() {
+             if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
+                objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
+              myCheckHit();
+                myObstacle();
+                myObstacle2();
+              myObstacle3();
+             myObstacle4();
+              }
+            }
      
             function moveRight() {
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
@@ -223,17 +238,22 @@ function myObstacle(){
              myObstacle2();
              myObstacle3();
              myObstacle4();
-              myCoin();
-             myCoin2();
-             myCoin3();
             }
-           
-      
+            function moveDown() {
+      if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
+        objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+       myCheckHit();
+         myObstacle();
+         myObstacle2();
+          myObstacle3();
+             myObstacle4();
+ }
+            }
+        
+
             window.onload = init;
             
         </script>
-        
-
 
     <body onkeydown="getKeyAndMove(event)">
 
