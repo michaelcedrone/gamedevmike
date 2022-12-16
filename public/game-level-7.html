@@ -226,11 +226,26 @@ function myObstacle3(){
                         break;
                     case 40: //down arrow key
                   clearInterval(mygravity);
+                  moveDown()
+                  
                         break;
                 }
             }
             function moveLeft() {
                 objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
+               myCheckHit();
+             myObstacle();
+             myObstacle2();
+             myObstacle3();
+             myObstacle4()
+             myObstacle5()
+             myCoin()
+             myCoin2()
+             myCoin3()
+            }
+     
+      function moveDown() {
+                objImage.style.top = parseInt(objImage.style.top) + 100 + "px";
                myCheckHit();
              myObstacle();
              myObstacle2();
