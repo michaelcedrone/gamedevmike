@@ -16,7 +16,7 @@
     
     <input type=button style="float: right; margin-right: 300px;" value="spend 3 coins..." onClick="{
                                                  let myIn01 = document.getElementById('myCounter').innerHTML
-                                                 if (myIn01 == 5){
+                                                 if (myIn01 == 6){
                                                  document.getElementById('myWall').innerHTML = GFG_Fun()
                                                }
                                        }">
@@ -68,9 +68,13 @@ if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
              myObstacle3();
              myObstacle4()
              myObstacle5()
+             myObstacle5()
              myCoin()
              myCoin2()
              myCoin3()
+             myCoin4()
+             myCoin5()
+             myCoin6()
  }
    }
   
@@ -197,7 +201,7 @@ function myObstacle3(){
  function myCoin4(){
    if ( myHitOther('myImg01','myImg12') ){
         mySound4.play() 
-       document.getElementById('myImg10').style.left = '9000px'
+       document.getElementById('myImg12').style.left = '9000px'
        document.getElementById('myCounter').innerHTML ++
    }
 }
@@ -205,7 +209,15 @@ function myObstacle3(){
  function myCoin5(){
    if ( myHitOther('myImg01','myImg13') ){
         mySound4.play() 
-       document.getElementById('myImg10').style.left = '9000px'
+       document.getElementById('myImg13').style.left = '9000px'
+       document.getElementById('myCounter').innerHTML ++
+   }
+}
+ 
+ function myCoin6(){
+   if ( myHitOther('myImg01','myImg14') ){
+        mySound4.play() 
+       document.getElementById('myImg14').style.left = '9000px'
        document.getElementById('myCounter').innerHTML ++
    }
 }
@@ -225,7 +237,7 @@ function myObstacle3(){
  <img id="myImg11" style="position:absolute; width:2000px; height:200px; top: 720px; left:0px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
  <img id="myImg12" style="position:absolute; width:100px; height:80px; top: 430px; left:1200px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
   <img id="myImg13" style="position:absolute; width:100px; height:80px; top: 480px; left:800px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
- 
+ <img id="myImg14" style="position:absolute; width:100px; height:80px; top: 250px; left:620px;" src="https://pngimg.com/uploads/coin/coin_PNG36885.png">
  
  
     <script type="text/javascript">
@@ -272,6 +284,9 @@ function myObstacle3(){
              myCoin()
              myCoin2()
              myCoin3()
+             myCoin4()
+             myCoin5()
+             myCoin6()
             }
      
       function moveDown() {
@@ -286,6 +301,9 @@ function myObstacle3(){
              myCoin()
              myCoin2()
              myCoin3()
+             myCoin4()
+             myCoin5()
+             myCoin6()
             }
 
     
@@ -305,6 +323,9 @@ function myObstacle3(){
                myCoin()
              myCoin2()
              myCoin3()
+              myCoin4()
+             myCoin5()
+             myCoin6()
               }
             }
      
@@ -320,6 +341,9 @@ function myObstacle3(){
               myCoin()
              myCoin2()
              myCoin3()
+             myCoin4()
+             myCoin5()
+             myCoin6()
             }
            
       
