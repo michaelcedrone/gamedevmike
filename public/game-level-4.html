@@ -17,8 +17,9 @@
     <input type=button value="spend 3 coins..." onClick="{
                                                  let myIn01 = document.getElementById('myCounter').innerHTML
                                                  if (myIn01 == 3){
+                                                  myIn01 -= 3
                                                  document.getElementById('myWall').innerHTML = GFG_Fun()
-                                                         document.getElementById('myCounter').innerHTML = 0
+                                                       
                                                }
                                        }">
 
