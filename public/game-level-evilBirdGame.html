@@ -4,7 +4,7 @@
 <head>
  <center>
  <br><br><br><br>
- <h1>Level unfair! Kinda like that one bird game...</h1>
+ <h1>'Anti' Anti-gravity level! Kinda like that one bird game...</h1>
 <br>
   
   <h4> (HAHAHAHAHAHAHHAHAHA, THE NIGHTMARE ISN'T OVER!) </h4>
@@ -47,7 +47,7 @@
  
  function mygravity() {
 if( parseInt(document.getElementById('myImg01').style.top)    <= 990){
- objImage.style.top = parseInt(objImage.style.top) - 0.5 + "px";
+ objImage.style.top = parseInt(objImage.style.top) + 0.5 + "px";
              myCheckHit();
              myObstacle();
              myObstacle2();
@@ -163,8 +163,8 @@ function myObstacle3(){
 <img id="myImg03" style="position:absolute; width:100px; height:2000px; top: 0px; left:10px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
 <img id="myImg04" style="position:absolute; width:100px; height:80px; top: 590px; left:7000px;"  src="https://i2.wp.com/sreditingzone.com/wp-content/uploads/2018/07/png-light-6.png?resize=651%2C600&ssl=1">   
 <img id="myImg05" style="position:absolute; width:100px; height:2000px; top: 0px; left:1500px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-<img id="myImg06" style="position:absolute; width:1000px; height:1000px; top: 0px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
- <img id="myImg07" style="position:absolute; width:1000px; height:1000px; top: 0px; left:0px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
+<img id="myImg06" style="position:absolute; width:1000px; height:500px; top: 0px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
+ <img id="myImg07" style="position:absolute; width:1000px; height:500px; top: 0px; left:0px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
  <img id="myImg08" style="position:absolute; width:2000px; height:100px; top: 700px; left:0px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
 
  
@@ -186,17 +186,11 @@ function myObstacle3(){
                     case 38: //Up arrow key
                   clearInterval(moveDown);
                         moveUp();
-                   setInterval(moveUp,100);
                         break;
                     case 39: //right arrow key
                   clearInterval(moveLeft);
                         moveRight();
                   setInterval(moveRight,100);
-                        break;
-                    case 40: //down arrow key
-                  clearInterval(mygravity);
-                  moveDown()
-                  
                         break;
                 }
             }
@@ -211,24 +205,10 @@ function myObstacle3(){
              myObstacle6()
             }
      
-      function moveDown() {
-                objImage.style.top = parseInt(objImage.style.top) + 25 + "px";
-               myCheckHit();
-             myObstacle();
-             myObstacle2();
-             myObstacle3();
-             myObstacle4()
-             myObstacle5()
-             myObstacle6()
-            }
-
-    
-      
-    
      
             function moveUp() {
              if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
-                objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
+                objImage.style.top = parseInt(objImage.style.top) - 25 + "px";
               myCheckHit();
                 myObstacle();
                 myObstacle2();
