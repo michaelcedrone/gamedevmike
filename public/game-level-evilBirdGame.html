@@ -48,7 +48,7 @@
  function mygravity() {
 if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
  objImage.style.top = parseInt(objImage.style.top) + 0.5 + "px";
-             mySound2.play()
+             
              myCheckHit();
              myObstacle();
              myObstacle2();
@@ -208,8 +208,8 @@ function myObstacle3(){
      
      
             function moveUp() {
-             if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
                 objImage.style.top = parseInt(objImage.style.top) - 25 + "px";
+              mySound2.play()
               myCheckHit();
                 myObstacle();
                 myObstacle2();
