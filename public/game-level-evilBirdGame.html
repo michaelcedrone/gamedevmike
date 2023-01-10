@@ -1,14 +1,14 @@
 <h6> Version 0.0.1 </h6>
 
+ <h1>Level six! Gravity control</h1>
+<br><br><br><br>
 
 <head>
- <center>
- <br><br><br><br>
- <h1>'Anti' Anti-gravity level! Kinda like that one bird game...</h1>
-<br>
-  
-  <h4> (HAHAHAHAHAHAHHAHAHA, THE NIGHTMARE ISN'T OVER!) </h4>
-   </head>
+   <h4> "warning", holding arrow keys makes the gravitational pull too strong! </h4>
+   
+   
+</head>
+
 
 
 <style>
@@ -33,38 +33,9 @@
 
 
 <script>
- 
- 
-  function GFG_Fun() {
-                var a = document.createElement('a'); 
-                var link = document.createTextNode("Click to win. Hurry!");
-                a.appendChild(link); 
-                a.title = "https://michaelcedrone.github.io/gamedevmike/public/secret.html"; 
-                a.href = "https://michaelcedrone.github.io/gamedevmike/public/secret.html"; 
-                document.body.appendChild(a); 
-            }
- 
- 
- function mygravity() {
-if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
- objImage.style.top = parseInt(objImage.style.top) + 0.5 + "px";
-             
-             myCheckHit();
-             myObstacle();
-             myObstacle2();
-             myObstacle3();
-             myObstacle4()
-             myObstacle5()
-             myObstacle6()
- }
-   }
-  
-
-   setInterval(mygravity,10)
 
  let mySound2 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Jump.wav')
  let mySound3 = new Audio('https://michaelcedrone.github.io/gamedevmike/public/Mario%20Death%20-%20QuickSounds.com.mp3')
- let mySound4 = new Audio(' https://michaelcedrone.github.io/gamedevmike/public/mixkit-fairy-arcade-sparkle-866.wav')
    // global variables here
    let myGlobalX = 0
    let myClock
@@ -86,13 +57,27 @@ function myHitOther(my1,my2){
        return true
    }
 }
+ 
+ 
+ function mygravity() {
+if( parseInt(document.getElementById('myImg01').style.top)    <= 590){
+ objImage.style.top = parseInt(objImage.style.top) + 0.5 + "px";
+ myObstacle()
+ myObstacle2()
+ myObstacle3()
+ myObstacle4()
+ }
+   }
+  
+
+   setInterval(mygravity,10)
 
 
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
        alert('Mission failed, successfully!?')  
        document.getElementById('myImg01').style.left = '0px'
-       location = 'secret.html'  // go to your next level
+       location = 'https://michaelcedrone.github.io/gamedevmike/public/game-level-7.html'  // go to your next level
    }
 }
  
@@ -102,19 +87,19 @@ function myObstacle(){
    if ( myHitOther('myImg01','myImg03') ){
        mySound3.play()
        alert('You Lose')  
-       document.getElementById('myImg01').style.left = '9000px'
-       location = 'game-level-7.html'  // go to your next level
+       document.getElementById('myImg01').style.left = '5px'
+       location = 'https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html'  // go to your next level
    }
 }
 
    
  
-function myObstacle2(){
+ function myObstacle2(){
    if ( myHitOther('myImg01','myImg04') ){
-       mySound3.play()
-       alert('You Lose')  
-       document.getElementById('myImg01').style.left = '9000px'
-       location = 'game-level-7.html'  // go to your next level
+        mySound3.play()
+       alert('Wait what...')  
+       document.getElementById('myImg01').style.left = '-900px'
+       location = 'secret.html'  // go to your next level
    }
 }
  
@@ -122,8 +107,8 @@ function myObstacle3(){
    if ( myHitOther('myImg01','myImg05') ){
        mySound3.play()
        alert('You Lose')  
-       document.getElementById('myImg01').style.left = '9000px'
-       location = 'game-level-7.html'  // go to your next level
+       document.getElementById('myImg01').style.left = '5px'
+       location = 'https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html'  // go to your next level
    }
 }
  
@@ -131,43 +116,20 @@ function myObstacle3(){
    if ( myHitOther('myImg01','myImg06') ){
        mySound3.play()
        alert('You Lose')  
-       document.getElementById('myImg01').style.left = '9000px'
-       location = 'game-level-7.html'  // go to your next level
+       document.getElementById('myImg01').style.left = '5px'
+       location = 'https://michaelcedrone.github.io/gamedevmike/public/game-level-6.html'  // go to your next level
    }
 }
- 
- function myObstacle5(){
-   if ( myHitOther('myImg01','myImg07') ){
-       mySound3.play()
-       alert('You Lose')  
-       document.getElementById('myImg01').style.left = '9000px'
-       location = 'game-level-7.html'  // go to your next level
-   }
-}
- 
- function myObstacle6(){
-   if ( myHitOther('myImg01','myImg08') ){
-       mySound3.play()
-       alert('You Lose')  
-       document.getElementById('myImg01').style.left = '9000px'
-       location = 'game-level-7.html'  // go to your next level
-   }
-}
- 
- 
- 
    
 </script>
 
-<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 400px; left:500px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
-<img id="myImg02" style="position:absolute; width:100px; height:80px; top: 590px; left:8000px;" src="https://freepngimg.com/thumb/toyota/17-toyota-png-image-car-image.png">
-<img id="myImg03" style="position:absolute; width:100px; height:2000px; top: 0px; left:10px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-<img id="myImg04" style="position:absolute; width:100px; height:80px; top: 590px; left:7000px;"  src="https://i2.wp.com/sreditingzone.com/wp-content/uploads/2018/07/png-light-6.png?resize=651%2C600&ssl=1">   
-<img id="myImg05" style="position:absolute; width:100px; height:2000px; top: 0px; left:1500px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-<img id="myImg06" style="position:absolute; width:1000px; height:300px; top: 0px; left:1000px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
- <img id="myImg07" style="position:absolute; width:1000px; height:300px; top: 0px; left:0px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
- <img id="myImg08" style="position:absolute; width:2000px; height:100px; top: 700px; left:0px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
-
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top: 590px; left:100px;"  src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png">
+<img id="myImg02" style="position:absolute; width:100px; height:80px; top: 590px; left:1000px;" src="https://freepngimg.com/thumb/toyota/17-toyota-png-image-car-image.png">
+<img id="myImg03" style="position:absolute; width:500px; height:300px; top: 400px; left:400px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+<img id="myImg04" style="position:absolute; width:100px; height:80px; top: 590px; left:2000px;"  src="https://i2.wp.com/sreditingzone.com/wp-content/uploads/2018/07/png-light-6.png?resize=651%2C600&ssl=1">   
+<img id="myImg05" style="position:absolute; width:500px; height:300px; top: 400px; left:1200px;" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439">
+<img id="myImg06" style="position:absolute; width:500px; height:100px; top: 0px; left:800px; transform: rotate(180deg);" src="https://vignette2.wikia.nocookie.net/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png/revision/latest?cb=20130304122439"> 
+ 
  
     <script type="text/javascript">
             //init object globally
@@ -185,12 +147,18 @@ function myObstacle3(){
                   setInterval(moveLeft,100);
                         break;
                     case 38: //Up arrow key
+                  clearInterval(moveDown);
                         moveUp();
                         break;
                     case 39: //right arrow key
                   clearInterval(moveLeft);
                         moveRight();
                   setInterval(moveRight,100);
+                        break;
+                    case 40: //down arrow key
+                  clearInterval(moveUp);
+                        moveDown();
+                  setInterval(moveDown,100);
                         break;
                 }
             }
@@ -201,21 +169,22 @@ function myObstacle3(){
              myObstacle2();
              myObstacle3();
              myObstacle4()
-             myObstacle5()
-             myObstacle6()
             }
      
      
+
+    
+      
+    
+     
             function moveUp() {
+             if( parseInt(document.getElementById('myImg01').style.top)    >= 0){
                 objImage.style.top = parseInt(objImage.style.top) - 50 + "px";
-              mySound2.play()
               myCheckHit();
                 myObstacle();
                 myObstacle2();
               myObstacle3();
              myObstacle4();
-              myObstacle5()
-              myObstacle6()
               }
             }
      
@@ -226,11 +195,8 @@ function myObstacle3(){
              myObstacle2();
              myObstacle3();
              myObstacle4();
-             myObstacle5()
-             myObstacle6()
-
             }
-           
+    
       
             window.onload = init;
             
