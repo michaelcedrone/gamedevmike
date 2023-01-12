@@ -147,7 +147,6 @@ function myObstacle3(){
                   setInterval(moveLeft,100);
                         break;
                     case 38: //Up arrow key
-                  clearInterval(moveDown);
                         moveUp();
                         break;
                     case 39: //right arrow key
@@ -173,18 +172,19 @@ function myObstacle3(){
      
      
 
-    
-      
-    
-     
-            function moveUp() {
-                objImage.style.top = parseInt(objImage.style.top) - 50 + "px";
-              myCheckHit();
+    function moveUp() {
+             if( parseInt(document.getElementById('myImg01').style.top)    >= 590){
+                objImage.style.top = parseInt(objImage.style.top) - 200 + "px";
+                 mySound2.play()
+                 myCheckHit()
                 myObstacle();
                 myObstacle2();
               myObstacle3();
              myObstacle4();
               }
+            }
+      
+
 
      
             function moveRight() {
